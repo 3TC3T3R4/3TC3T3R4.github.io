@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    Realizar la siguiente figura por medio del ciclo Mientras - Hacer
+	<pre>
+		 
+         *
+        **
+       ***
+      ****
+     *****
+    ******
+   *******
+  ********
+ *********
+**********
+
+
+	</pre>
+
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+		
+		
+package test;
+
+
+public class TestFigure {
+	public static void main(String[] args) {
+		Process process = new Process();
+		process.getfigure1();
+	}
+}
+
+
+package test;
+
+
+public class Process {
+
+	private int i;
+	private int space;
+	private int asterisco;
+
+
+public void getfigure1(){
+	while(i<12){
+	
+	space=1;
+	
+		while(space<12-i){
+		
+			System.out.print(" ");
+			space=space+1;
+		}
+	
+		
+		asterisco=1;
+		
+		while(asterisco<i){
+		
+			System.out.print("*");
+			asterisco=asterisco+1;
+		}
+		
+		System.out.println("");
+	
+		i=i+1;
+		
+	}
+	
+	
+	
+	
+
+}
+	
+		
+	
+}
+
+
+
+    </pre>
+</p>
+
+<a class="regresar" href="../../Java/Taller_3.html">VOLVER ATRAS</a>
+
+</body>
+</html>

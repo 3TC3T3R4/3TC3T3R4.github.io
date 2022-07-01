@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.
+en modo funciones.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+		SubProceso option <- getinfo ()
+		Definir option Como Entero;
+		Escribir "Bienvenido(a) a nuestra tienda selecciona la opcion que vas a realizar";
+		Escribir "presiona 1. Alquilar peliculas";
+		Escribir "presiona 2. Consultar Peliculas disponibles";
+		Escribir "presiona 3. hacer devolucion de peliculas";
+		leer option;
+		Limpiar Pantalla;
+	FinSubProceso
+	
+	
+	SubProceso   showinfo(option)
+		Definir name,pqr Como Caracter;
+		Definir id,option2 Como Entero;
+		
+		Segun option Hacer
+			1:
+				Escribir Sin Saltar"Ingresa tu nombre  por favor";
+				Leer name;
+				Escribir  name," que pelicula quieres alquilar?";
+				Escribir "Las peliculas que puedes alquilar son estas";
+				Escribir "1. The Walking Dead";
+				Escribir "2. Harry Potter";
+				Escribir "3. Black Mirror";
+				leer option2;
+				Limpiar Pantalla;
+				
+				si (option2==1 o option2==2 o option2==3) Entonces
+					Escribir "Excelente opción!";
+					Escribir "Pelicula alquilada, Enjoy!";
+					
+				SiNo
+					Escribir "Selecciona una pelicula que este en la categoria";
+				FinSi
+				
+			2:
+				
+				Escribir " Estas son las siguientes peliculas disponibles";
+				Escribir " ";
+				Escribir "--The Walking Dead";
+				Escribir "--Harry Potter";
+				Escribir "--Black Mirror";
+				
+			3:
+				
+				Escribir "Gracias por tu devolucion";
+				Escribir Sin Saltar "Tuviste algun inconveniente?";
+				Escribir  " Quisieras hacer una anotacion sobre un posible daño o novedad presentada?";
+				Escribir "Presiona 1 Si quieres presentar novedad";
+				Escribir "Presiona 2 para No presentar novedad";
+				Leer option2;
+				
+				si option2 == 1 Entonces
+					Escribir "Ingresa tu nombre para guardar la novedad";
+					leer name;
+					Escribir "Cuentanos ",name," que paso?";
+					Leer pqr;
+					Escribir "Gracias por la observacion, trabajaremos en ello";
+					
+				FinSi
+				
+			De Otro Modo:
+				Escribir "Digite por favor un valor correcto";
+		FinSegun
+		
+	FinSubProceso
+	
+	Proceso point1_4
+		Definir option Como Entero;
+		option<-getinfo();
+		showinfo(option);
+		
+	FinProceso
+	
+
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../PSEint/Taller_5.html">VOLVER ATRAS</a>
+</body>
+</html>

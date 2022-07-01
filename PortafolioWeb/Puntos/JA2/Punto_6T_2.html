@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+		/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package test;
+
+/**
+ *
+ * @author 4dm1n1str4t0r
+ */
+public class TestMotorcycle {
+
+	public static void main(String[] args) {
+	
+	Process process1 = new Process();
+	process1.getinfo();
+	process1.showinfo();
+		
+		
+	}
+
+	
+}
+
+
+
+package mx.com.Etcetera;
+
+
+public class Motorcycle {
+	
+	private int numberPlate;
+	private String color;
+
+	public int getNumberPlate() {
+		return numberPlate;
+	}
+
+	public void setNumberPlate(int numberPlate) {
+		this.numberPlate = numberPlate;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+	
+	
+	
+}
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package mx.com.Etcetera;
+
+/**
+ *
+ * @author 4dm1n1str4t0r
+ */
+public class Person {
+	
+	private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+	
+}
+
+
+
+package test;
+
+import java.util.Scanner;
+import mx.com.Etcetera.Motorcycle;
+import mx.com.Etcetera.Person;
+
+
+public class Process {
+	Scanner keyboard = new Scanner(System.in);
+	Motorcycle moto1=new Motorcycle();
+	Person person1 = new Person();
+	private  String observation;
+	private int option;
+	private int option2;
+	
+	
+	public void getinfo(){
+	
+		System.out.println("Bienvenido a nuestra tienda");
+		System.out.println("Selecciona la accion que quieras realizar");
+		System.out.println(" 1.Para registrar el ingreso de tu motocicleta\n 2.Generar el registro de salida de las novedades de tu motocicleta\n 3.Observar cambios hechos en tu motocicleta");
+		option = keyboard.nextInt();
+	
+	}
+	
+	
+	
+	
+	public void showinfo() {
+		
+		if(option == 2 || option==3){
+			
+			System.out.println("Debe hacer primero el registro  de ingreso del la motocicleta");	
+			
+		}else if(option == 1){
+			
+				System.out.println("Ingrese el numero de matricula por favor");
+				moto1.setNumberPlate(keyboard.nextInt());
+				keyboard.nextLine();
+				System.out.println("Ingrese el nombre del dueño de la motocicleta");
+				person1.setName(keyboard.nextLine());
+				System.out.println("Ingrese el color de su motocicleta");
+				moto1.setColor(keyboard.nextLine());
+				System.out.println("Ingrese la observacion de su vehiculo");
+				observation=keyboard.nextLine();
+				System.out.println("Informacion almacenada");
+				System.out.println("Puedes presionar");
+				System.out.println("2.Para generar el registro de salida de tu motocicleta\n 3.Observar cambios realizados en tu motocicleta");
+				option2=keyboard.nextInt();
+				switch (option2) {
+				case 2:
+					System.out.println(person1.getName()+" El vehiculo con numero de placa " +moto1.getNumberPlate()+ " Color: " + moto1.getColor() + " se retira del taller con las siguientes novedades");
+					System.out.println("--El radiador presenta problemas de enfriamento\n--Presenta fugaz de aceite el motor");
+					System.out.println("Quisieras saber los arreglos realizados?\n 1.SI\n2.NO");
+					option2=keyboard.nextInt();
+					if(option2 == 1){
+						
+					System.out.println("La motocicleta con numero de placa: " + moto1.getNumberPlate());
+					System.out.println("Se le agrego nuevo liquido de frenos  y ajustes de entradas de radiador tambien se le soldo la respectiva carcasa del motor");
+					}else{
+						System.out.println("Fue un placer tu visista");	
+					}
+					break;
+					
+				case 3:
+					System.out.println("La motocicleta con numero de placa: " + moto1.getNumberPlate());
+					System.out.println("Se le agrego nuevo liquido de frenos  y ajustes de entradas de radiador tambien se le soldo la respectiva carcasa del motor");
+					
+					break;
+				default:
+					System.out.println("Ingrese una opcion correcta por favor");	
+				
+			}
+				
+				
+				
+			}
+	
+		}
+	}
+
+
+
+
+
+    </pre>
+</p>
+
+
+<a class="regresar" href="../../Java/Taller_2.html">VOLVER ATRAS</a>
+
+</body>
+</html>

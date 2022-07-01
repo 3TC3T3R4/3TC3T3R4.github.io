@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p class="titulo">
+    Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que
+
+	<pre>
+		
+		    *
+	 	   ***
+	          *****
+	         *******
+		*********
+	       ***********
+	      *************
+	     ***************
+	    *****************
+           *******************
+          *********************
+		   ***
+		   ***
+		  *****
+		 *******
+
+
+	</pre>
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+    Proceso point3
+		
+		Definir i,asterisco,espacio Como Entero;
+		i<-1;
+		
+		Repetir
+			
+			espacio<-1;
+			Mientras espacio<12-i hacer
+				
+				Escribir Sin Saltar" ";
+				espacio<-espacio+1;
+				
+			FinMientras
+			
+			
+			
+			Para asterisco<-1 Hasta i Con Paso 1 hacer
+				
+				Escribir Sin Saltar "*";
+				
+			FinPara
+			asterisco<-1;
+			Mientras asterisco<i hacer
+				
+				Escribir Sin Saltar"*";
+				asterisco<-asterisco+1;
+				
+			FinMientras
+			
+			Escribir " ";
+			i<-i+ 1;
+			
+
+			
+		Hasta Que (i>=12)
+		
+		Escribir "         ***";
+		Escribir "         ***";
+		Escribir "        *****";
+		Escribir "       *******";
+		
+		
+	
+FinProceso
+
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../PSEint/Taller_3.html">VOLVER ATRAS</a>
+
+</body>
+</html>

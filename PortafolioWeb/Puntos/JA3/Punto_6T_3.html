@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+	
+package test;
+
+
+public class TestProcess {
+	
+	public static void main(String[] args) {
+		Process process = new Process();
+		process.getflag();
+		process.showinfo();
+		
+		
+	}
+	
+	
+}
+
+
+
+package mx.com.Etcetera;
+
+
+public class Person {
+	
+	private String name;
+	private String organization;
+	private int tel;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getOrganization() {
+		return organization;
+	}
+
+	public void setOrganization(String organization) {
+		this.organization = organization;
+	}
+
+	public int getTel() {
+		return tel;
+	}
+
+	public void setTel(int tel) {
+		this.tel = tel;
+	}
+
+	public Person(String name, String organization, int tel) {
+		this.name = name;
+		this.organization = organization;
+		this.tel = tel;
+	}
+
+	public Person() {
+	}
+	
+	
+}
+
+
+package test;
+
+import java.util.Scanner;
+import mx.com.Etcetera.Person;
+
+public class Process {
+
+	Scanner keyboard = new Scanner(System.in);
+	Person person1 = new Person();
+	Person person2 = new Person();
+	Person person3 = new Person();
+	private boolean flag;
+	private boolean flag2;
+	private int option;
+
+	public void getflag() {
+
+		flag2 = true;
+		flag = true;
+
+	}
+
+	public void showinfo() {
+
+		while (flag == true) {
+
+			System.out.println("1.Añadir contacto\n2.Buscar contactos\n3.Eliminar contacto\n4.Terminar programa");
+			option = keyboard.nextInt();
+			keyboard.nextLine();
+			switch (option) {
+				case 1:
+
+					flag2 = false;
+
+					System.out.println("Ingrese el nombre del contacto #1");
+					person1.setName(keyboard.nextLine());
+
+					System.out.println("Ingrese el numero del contacto #1");
+					person1.setTel(keyboard.nextInt());
+					keyboard.nextLine();
+
+					System.out.println("Ingrese la organizacion del contacto #1");
+					person1.setOrganization(keyboard.nextLine());
+
+					System.out.println("Ingrese el nombre del contacto #2");
+					person2.setName(keyboard.nextLine());
+
+					System.out.println("Ingrese el numero del contacto #2");
+					person2.setTel(keyboard.nextInt());
+					keyboard.nextLine();
+
+					while (person1.getTel() == person2.getTel()) {
+
+						System.out.println("No puede ingresar 2 contactos con el mismo numero\n Ingrese nuevamente el numero del contacto #2");
+						person2.setTel(keyboard.nextInt());
+						keyboard.nextLine();
+
+					}
+
+					System.out.println("Ingrese organizacion del contacto #2");
+					person2.setOrganization(keyboard.nextLine());
+
+					System.out.println("Ingrese el nombre del contacto #3");
+					person3.setName(keyboard.nextLine());
+
+					System.out.println("Ingrese el numero del contacto #3");
+					person3.setTel(keyboard.nextInt());
+					keyboard.nextLine();
+
+					while (person1.getTel() == person3.getTel() || person2.getTel() == person3.getTel()) {
+
+						System.out.println("No puede ingresar dos contactos con el mismo numero\n Ingrese nuevamente el numero del contacto #3");
+						person3.setTel(keyboard.nextInt());
+						keyboard.nextLine();
+
+					}
+
+					System.out.println("Ingrese organizacion del contacto #3");
+					person3.setOrganization(keyboard.nextLine());
+					System.out.println("");
+					System.out.println("Contactos guardados con exito");
+
+					break;
+				case 2:
+					
+					if(flag2 == true){
+					
+						System.out.println("No se han ingresado contactos por el momento");
+					
+					}else{
+					
+						System.out.println("Contacto #1 "+ person1.getName()+", numero de contacto "+
+							person1.getTel()+" organizacion, "+person1.getOrganization());
+						System.out.println("Contacto #2 "+ person2.getName()+", numero de contacto "+
+							person2.getTel()+" organizacion, "+person2.getOrganization());
+						System.out.println("Contacto #3 "+ person3.getName()+", numero de contacto "+
+							person3.getTel()+" organizacion, "+person3.getOrganization());
+					
+					}
+					
+					break;
+
+				case 3:
+					
+					if(flag2==true){
+					
+						System.out.println("No se han ingresado contactos por el momento para poderlos eliminar");
+					}else{
+					
+						
+						System.out.println("Cual contacto quisieras eliminar?\n");
+						System.out.println("1.Contacto #1 "+ person1.getName()+", numero de contacto "+
+							person1.getTel()+" organizacion, "+person1.getOrganization());
+						System.out.println("2.Contacto #2 "+ person2.getName()+", numero de contacto "+
+							person2.getTel()+" organizacion, "+person2.getOrganization());
+						System.out.println("3.Contacto #3 "+ person3.getName()+", numero de contacto "+
+							person3.getTel()+" organizacion, "+person3.getOrganization());
+							option=keyboard.nextInt();
+							
+							
+							switch (option) {
+							
+								case 1:
+								
+							System.out.println("Solo quedane estos dos contactos");
+								
+							System.out.println(".Contacto #2 "+ person2.getName()+", numero de contacto "+
+							person2.getTel()+" organizacion, "+person2.getOrganization());
+							System.out.println(".Contacto #3 "+ person3.getName()+", numero de contacto "+
+							person3.getTel()+" organizacion, "+person3.getOrganization());
+								
+							person1.setName("");
+							person1.setTel(0);
+							person1.setOrganization("");	
+								
+									break;
+								
+								case 2:
+								
+								System.out.println("Solo quedane estos dos contactos");
+								
+							System.out.println(".Contacto #1 "+ person1.getName()+", numero de contacto "+
+							person1.getTel()+" organizacion, "+person1.getOrganization());
+							System.out.println(".Contacto #3 "+ person3.getName()+", numero de contacto "+
+							person3.getTel()+" organizacion, "+person3.getOrganization());
+								
+							person2.setName("");
+							person2.setTel(0);
+							person2.setOrganization("");	
+									
+									
+									
+								
+									break;
+									
+								case 3:
+								System.out.println("Solo quedane estos dos contactos");
+								
+							System.out.println(".Contacto #1 "+ person1.getName()+", numero de contacto "+
+							person1.getTel()+" organizacion, "+person1.getOrganization());
+							System.out.println(".Contacto #2 "+ person2.getName()+", numero de contacto "+
+							person2.getTel()+" organizacion, "+person2.getOrganization());
+								
+							person3.setName("");
+							person3.setTel(0);
+							person3.setOrganization("");	
+									
+									
+									break;
+									
+							default:
+								System.out.println("Ingrese un valor correcto");
+						}
+					
+					}
+					
+					
+				break;
+				
+			case 4:
+				
+				flag=false;
+				
+				break;
+			default:
+				
+				System.out.println("Ingrese un valor correcto");	
+					
+			}
+
+		}
+
+	}
+
+}
+
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../Java/Taller_3.html">VOLVER ATRAS</a>
+
+</body>
+</html>

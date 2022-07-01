@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser el siguiente:
+	<pre>
+5 X 1 = 5
+5 X 2 = 10
+5 X 3 = 15
+5 X 4 = 20
+5 X 5 = 25
+5 X 6 = 30
+5 X 7 = 35
+5 X 8 = 40
+5 X 9 = 45
+5 X 10 = 50
+
+	</pre>
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+		/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package test;
+
+/**
+ *
+ * @author 4dm1n1str4t0r
+ */
+public class TestNumebr {
+	
+	public static void main(String[] args) {
+		Process process1 = new Process();
+		process1.getnumber();
+		process1.showinfo();
+	}
+	
+}
+
+
+
+package test;
+
+import java.util.Scanner;
+
+
+public class Process {
+	
+	Scanner keyboard = new Scanner(System.in);
+	private  int number;
+	
+	public void getnumber(){
+	
+		System.out.println("Ingrese el numero del que nesecita la tabla de multiplicar");
+		number=keyboard.nextInt();
+	
+	
+	}
+	
+	public void showinfo(){
+	
+	
+		for (int i = 1; i <= 10; i++) {
+			
+			System.out.println(number +" X " +i+" = "+number*i);
+			
+		}
+	
+	
+	
+	}
+	
+	
+}
+
+
+
+
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../Java/Taller_3.html">VOLVER ATRAS</a>
+</body>
+</html>

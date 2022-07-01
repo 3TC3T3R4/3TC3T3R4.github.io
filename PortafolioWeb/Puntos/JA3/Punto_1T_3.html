@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    
+	Realizar la siguiente figura por medio del ciclo Para
+	<pre>
+		*
+		**
+		***
+		****
+		*****
+		******
+		*******
+		********
+		*********
+		**********
+		***********
+	</pre>
+
+
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+		
+		/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package test;
+
+/**
+ *
+ * @author 4dm1n1str4t0r
+ */
+public class TestFigure {
+
+
+	public static void main(String[] args) {
+		Process process = new Process();
+		process.getfigure();
+	}
+	
+}
+
+
+
+package test;
+
+
+
+public class Process {
+	
+	private int i;
+	private int space;
+	private int asterisco;
+	
+	public void getfigure(){
+	
+		for (i = 1; i < 11; i++) {
+			
+			for (asterisco =1 ; asterisco < i; asterisco++) {
+				
+				System.out.print("*");
+			}
+			
+			for (space =1 ; asterisco < 11-i; asterisco++) {
+				
+				System.out.print("");
+			}
+			
+			System.out.println(" ");
+			
+		}
+	
+	
+	
+	}
+	
+	
+}
+
+
+
+    </pre>
+</p>
+
+
+<a class="regresar" href="../../Java/Taller_3.html">VOLVER ATRAS</a>
+
+</body>
+</html>

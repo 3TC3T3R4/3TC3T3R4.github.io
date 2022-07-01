@@ -1,0 +1,272 @@
+
+.labelbien{
+
+text-align: center;
+padding: 50px;
+color: whitesmoke;
+margin: auto;
+
+
+
+}
+
+
+
+.fondo{
+
+height: 70px;
+width: 70px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-right: 25px;
+
+}
+
+header{
+
+text-align: center;
+display: flex;
+justify-content: space-between;
+height: 70px;
+background-color: limegreen;
+align-items: center;
+text-decoration: none;
+padding: 10px;
+
+}
+.logo{
+
+display: flex;
+
+}
+
+body{
+font-family: sans-serif;
+margin: 0;
+background-image:url(../CSS/img/fondo.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+a{
+
+text-decoration: none;
+color: black;
+
+}
+
+
+nav a{
+
+font-weight: 600;
+padding-right: 10px;
+cursor: pointer;
+
+
+}
+nav a:hover{
+
+
+color: gold;
+
+
+}
+
+.talleres{
+
+
+color: white;
+background-color: green;
+padding: 15px;
+appearance: button;
+border-radius: 90px;
+border-color: white;
+margin:120px ;
+position: static;
+display: block;
+align-items: center;
+text-align: center;
+
+}
+
+.Puntospseint{
+
+    color: white;
+    
+    display: block;
+    align-items: center;
+    text-align: center;
+    background-color: fuchsia;
+    
+}
+
+.talleresp{
+    
+    color: fuchsia;
+    background-color:blue;
+    padding: 20px;
+    appearance: button;
+    border-radius: 50px;
+    margin: 20px;
+    display: block;
+    
+    text-align: center;
+
+
+}
+
+.talleresj{
+
+    color: white;
+    background-color:red;
+    padding: 20px;
+    appearance: button;
+    border-radius: 50px;
+    margin: 80px;
+    display: block;
+    
+    text-align: center;
+
+
+
+
+
+
+}
+
+
+
+
+
+.puntosp{
+
+
+    color: yellow;
+    background-color:brown;
+    padding: 20px;
+    appearance: button;
+    border-radius: 50px;
+    margin: 60px;
+    display: block;
+    text-align: center;
+
+
+
+
+}
+
+
+
+
+.puntosj{
+
+    color: black;
+    background-color:goldenrod;
+    padding: 20px;
+    appearance: button;
+    border-radius: 50px;
+    margin: 60px;
+    display: block;
+    text-align: center;
+
+
+
+}
+
+.codigo{
+
+background-image: none;
+background-color: lightgreen;
+
+
+
+}
+
+.codigoenunciado{
+
+    background-color:mediumpurple;
+    color: aquamarine;
+    padding: 6px;
+    border-radius: 8px;
+    margin: 10px;
+    display: block;
+    text-align: center;
+
+
+
+
+}
+
+.titulo{
+
+
+display: block;
+color: black;
+background-color: tomato;
+text-align: center;
+border-radius: 8px;
+margin: 30px;
+
+}
+
+.solution{
+
+text-align: center;
+color: black;
+background-color:azure;
+
+
+
+}
+
+.loquemuestro{
+
+background-color: white;
+color: black;
+font-size:large;
+
+
+}
+
+.regresar{
+
+background-color:red;
+color: black;
+box-shadow: 0px 0px 20px rgb(254, 254, 254) inset, 0px 0px 25px rgb(255, 0, 0);
+width: 140px;
+height:140px;
+border:10px;
+border-radius:1150px;
+margin: auto 25px;
+font-size: large;
+
+}
+
+
+
+.indexp{
+
+    background-color:blue;
+    color: black;
+    box-shadow: 0px 0px 20px rgb(254, 254, 254) inset, 0px 0px 25px rgb(255, 0, 0);
+    width: 140px;
+    height:140px;
+    border:10px;
+    border-radius:1150px;
+    margin: auto 25px;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    margin: 90px;
+    
+
+}
+
+div{
+
+text-align: center;
+
+
+}

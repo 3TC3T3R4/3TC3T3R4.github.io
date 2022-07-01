@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.
+En modo funciones.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+		SubProceso flag <- getflag ()
+		Definir  flag como Logico;
+		flag<-Verdadero;
+		
+	FinSubProceso
+	
+	SubProceso showflag (flag)
+		
+		Definir option,mistakes1,mistakes2,mistakes3,mistakes4,mistakes5,mistakes6,mistakes7,mistakes8,count,id1,id2,id3,id4,id5,id6,id7,id8 como Entero;
+		Definir  flag2 como Logico;
+		Definir name1,name2,name3,name4,name5,name6,name7,name8 Como Caracter;
+		flag2<-Verdadero;
+		count <-0;
+		
+		Mientras flag==verdadero hacer
+			
+			Escribir "BIENVENIDO A LA ESCUELA EL MAESTRO";
+			Escribir "Selecciona una opcion";
+			Escribir "";
+			Escribir "1.Registrarse en el curso";
+			Escribir "2.Consultar personas que realizaron el curso";
+			Escribir "3.Consultar resultados de aprobacion";
+			Escribir "4.Salir del programa";
+			Leer option;
+			
+			Segun option Hacer
+				
+				1:
+					flag2 <-falso;
+					
+					si count < 1 entonces
+						
+						count<-count+1;
+						
+						Escribir "Ingrese su nombre completo separandolo";
+						leer name1;
+						Escribir"Ingrese el numero de su documento de identidad";
+						leer id1;
+						Escribir "Registro realizado";
+						mistakes1 <- (azar(5));
+						Escribir "";
+						Limpiar Pantalla;
+						Escribir "Ingrese su nombre completo separandolo";
+						leer name2;
+						Escribir"Ingrese el numero de su documento de identidad";
+						leer id2;
+						Escribir "Registro realizado";
+						mistakes2 <- (azar(5));
+						Escribir "";
+						Limpiar Pantalla;
+						Escribir "Ingrese su nombre completo separandolo";
+						leer name3;
+						Escribir"Ingrese el numero de su documento de identidad";
+						leer id3;
+						Escribir "Registro realizado";
+						mistakes3 <- (azar(5));
+						Escribir "";
+						Limpiar Pantalla;
+						Escribir "Ingrese su nombre completo separandolo";
+						leer name4;
+						Escribir"Ingrese el numero de su documento de identidad";
+						leer id4;
+						Escribir "Registro realizado";
+						mistakes4 <- (azar(5));
+						Escribir "";
+						Limpiar Pantalla;
+						Escribir "Ingrese su nombre completo separandolo";
+						leer name5;
+						Escribir"Ingrese el numero de su documento de identidad";
+						leer id5;
+						Escribir "Registro realizado";
+						mistakes5 <- (azar(5));
+						Escribir "";
+						Limpiar Pantalla;
+						Escribir "Ingrese su nombre completo separandolo";
+						leer name6;
+						Escribir"Ingrese el numero de su documento de identidad";
+						leer id6;
+						Escribir "Registro realizado";
+						mistakes6 <- (azar(5));
+						Escribir "";
+						Limpiar Pantalla;
+						Escribir "Ingrese su nombre completo separandolo";
+						leer name7;
+						Escribir"Ingrese el numero de su documento de identidad";
+						leer id7;
+						Escribir "Registro realizado";
+						mistakes7 <- (azar(5));
+						Escribir "";
+						Limpiar Pantalla;
+						Escribir "Ingrese su nombre completo separandolo";
+						leer name8;
+						Escribir"Ingrese el numero de su documento de identidad";
+						leer id8;
+						Escribir "Registro realizado";
+						mistakes8 <- (azar(5));
+						Escribir "";
+						Limpiar Pantalla;
+						
+						Escribir ("PERSONAS REGISTRADAS SATISFATORIAMENTE");
+						Escribir ("");
+						
+						
+						
+					SiNo
+						
+						
+						
+						Limpiar Pantalla;
+						Escribir "";
+						Escribir "¡¡¡¡REGISTROS PARA EL CURSO LLENO CAPACIDAD MAXIMA 8 PERSONAS!!!!!!";
+						Escribir "";
+						
+						
+					FinSi
+					
+					
+					
+				2:
+					
+					
+					
+					Si flag2==Verdadero Entonces
+						Limpiar Pantalla;
+						Escribir "NO SE HAN INGRESADO DATOS POR EL MOMENTO";
+						Escribir "";
+						
+					SiNo
+						
+						
+						Escribir "";
+						Escribir "----Personas que han presentado el curso hasta el momento son---";
+						Escribir "Nombre: ", name1, " Documento de identidad # ", id1;
+						Escribir "";
+						Escribir "Nombre: ", name2, " Documento de identidad # ", id2;
+						Escribir "";
+						
+						Escribir "Nombre: ", name3, " Documento de identidad # ", id3;
+						Escribir "";
+						
+						Escribir "Nombre: ", name4, " Documento de identidad # ", id4;
+						Escribir "";
+						
+						Escribir "Nombre: ", name5, " Documento de identidad # ", id5;
+						Escribir "";
+						
+						Escribir "Nombre: ", name6, " Documento de identidad # ", id6;
+						Escribir "";
+						
+						Escribir "Nombre: ", name7, " Documento de identidad # ", id7;
+						Escribir "";
+						
+						Escribir "Nombre: ", name8, " Documento de identidad # ", id8;
+						Escribir "";
+						
+						
+						
+						
+					FinSi
+					
+					
+					
+					
+					
+				3:
+					
+					Si flag2==Verdadero Entonces
+						Limpiar Pantalla;
+						Escribir "NO SE HAN INGRESADO DATOS POR EL MOMENTO";
+						Escribir "";
+						
+					SiNo
+						
+						Limpiar Pantalla;
+						Escribir "";
+						si mistakes1 <=2 Entonces
+							Escribir "Nombre: ", name1, " Documento de identidad # ", id1;
+							Escribir "";
+							Escribir"¡¡¡¡¡¡EXAMEN APROBADO!!!!!!!";
+							Escribir "";
+						sino
+							Escribir "Nombre: ", name1, " Documento de identidad # ", id1;
+							Escribir "";
+							Escribir "EXAMEN REPROBADO";
+							Escribir "";
+							
+						FinSi
+						si mistakes2 <=2 Entonces
+							Escribir "Nombre: ", name2, " Documento de identidad # ", id2;
+							Escribir "";
+							Escribir"¡¡¡¡¡¡EXAMEN APROBADO!!!!!!!";
+							Escribir "";
+						sino
+							Escribir "Nombre: ", name2, " Documento de identidad # ", id2;
+							Escribir "";
+							Escribir "EXAMEN REPROBADO";
+							Escribir "";
+							
+						FinSi
+						si mistakes3 <=2 Entonces
+							Escribir "Nombre: ", name3, " Documento de identidad # ", id3;
+							Escribir "";
+							Escribir"¡¡¡¡¡¡EXAMEN APROBADO!!!!!!!";
+							Escribir "";
+						sino
+							Escribir "Nombre: ", name3, " Documento de identidad # ", id3;
+							Escribir "";
+							Escribir "EXAMEN REPROBADO";
+							Escribir "";
+							
+						FinSi
+						
+						si mistakes4 <=2 Entonces
+							Escribir "Nombre: ", name4, " Documento de identidad # ", id4;
+							Escribir "";
+							Escribir"¡¡¡¡¡¡EXAMEN APROBADO!!!!!!!";
+							Escribir "";
+						sino
+							Escribir "Nombre: ", name4, " Documento de identidad # ", id4;
+							Escribir "";
+							Escribir "EXAMEN REPROBADO";
+							Escribir "";
+							
+						FinSi
+						
+						si mistakes5 <=2 Entonces
+							Escribir "Nombre: ", name5, " Documento de identidad # ", id5;
+							Escribir "";
+							Escribir"¡¡¡¡¡¡EXAMEN APROBADO!!!!!!!";
+							Escribir "";
+						sino
+							Escribir "Nombre: ", name5, " Documento de identidad # ", id5;
+							Escribir "";
+							Escribir "EXAMEN REPROBADO";
+							Escribir "";
+							
+						FinSi
+						
+						si mistakes6 <=2 Entonces
+							Escribir "Nombre: ", name6, " Documento de identidad # ", id6;
+							Escribir "";
+							Escribir"¡¡¡¡¡¡EXAMEN APROBADO!!!!!!!";
+							Escribir "";
+						sino
+							Escribir "Nombre: ", name6, " Documento de identidad # ", id6;
+							Escribir "";
+							Escribir "EXAMEN REPROBADO";
+							Escribir "";
+							
+						FinSi
+						
+						
+						
+						si mistakes7 <=2 Entonces
+							Escribir "Nombre: ", name7, " Documento de identidad # ", id7;
+							Escribir "";
+							Escribir"¡¡¡¡¡¡EXAMEN APROBADO!!!!!!!";
+							Escribir "";
+						sino
+							Escribir "Nombre: ", name7, " Documento de identidad # ", id7;
+							Escribir "";
+							Escribir "EXAMEN REPROBADO";
+							Escribir "";
+							
+						FinSi
+						
+						
+						
+						si mistakes8 <=2 Entonces
+							Escribir "Nombre: ", name8, " Documento de identidad # ", id8;
+							Escribir "";
+							Escribir"¡¡¡¡¡¡EXAMEN APROBADO!!!!!!!";
+							Escribir "";
+						sino
+							Escribir "Nombre: ", name8, " Documento de identidad # ", id8;
+							Escribir "";
+							Escribir "EXAMEN REPROBADO";
+							Escribir "";
+							
+						FinSi
+						
+						
+						
+					finSi
+					
+				4:
+					
+					flag<-Falso;
+					
+				De Otro Modo:
+					Limpiar Pantalla;
+					Escribir "INGRESE  UNA OPCION VALIDA";
+					Escribir "";
+					
+					
+			FinSegun
+			
+			
+			
+			
+		FinMientras
+		
+	FinSubProceso
+	
+	
+	
+	
+	Proceso point2_8
+		
+		Definir flag Como Logico;
+		
+		flag<-getflag();
+		showflag(flag);
+		
+	FinProceso
+	
+
+
+    </pre>
+</p>
+
+
+<a class="regresar" href="../../PSEint/Taller_5.html">VOLVER ATRAS</a>
+</body>
+</html>

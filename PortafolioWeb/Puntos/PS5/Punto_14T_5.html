@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+
+    Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:
+
+<pre>
+[0] = 55
+[1] = 99
+[2] = 11
+[3] = 56
+[4] = 69
+
+En modo funciones.
+</pre>
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+    
+SubProceso  showarray ()
+Definir indice,array Como Entero;
+Dimension array[5];
+para indice <-0 hasta 4 Con Paso 1 Hacer
+	array[indice] <- getarray();
+	
+FinPara
+
+para indice <-0 hasta 4 Con Paso 1 Hacer
+Escribir "[",indice,"]"," = ",array[indice];
+FinPara
+FinSubProceso
+
+SubProceso number<- getarray ()
+Definir number Como Entero;
+Escribir "Ingrese por favor un numero entero";
+Leer number;
+FinSubProceso
+
+Proceso point3_1
+showarray();
+
+FinProceso
+
+
+    </pre>
+</p>
+
+
+<a class="regresar" href="../../PSEint/Taller_5.html">VOLVER ATRAS</a>
+</body>
+</html>
