@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+	El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.
+En modo funciones.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+		SubProceso flag <- getflag ()
+		Definir flag Como Logico;
+		flag<-Verdadero;
+	FinSubProceso
+	
+	SubProceso  showflag (flag)
+		
+		Definir numberPlate1,numberPlate2,numberPlate3,numberPlate4,numberPlate5,clientNumber1,clientNumber2,count,clientNumber3,clientNumber4,clientNumber5,option Como Entero;
+		Definir name1,name2,name3,name4,name5,brand1,brand2,brand3,brand4,brand5 Como Caracter;
+		Definir flag2 Como Logico;
+		Definir dataPlate2 Como Entero;
+		Definir dataBrand2 Como Caracter;
+		Definir dataPlate1,dataNumberC1 Como Entero;
+		Definir dataNameC1,dataBrand1 Como caracter;
+		flag2<-Verdadero;
+		count<-0;	
+		
+		
+		Mientras flag == Verdadero hacer
+			
+			Escribir "Bienvenido al parqueadero el GUARDIAN";
+			Escribir "Seleccione accion a realizar";
+			Escribir "";
+			Escribir "1. Ingresar al parqueadero ";
+			Escribir "2. Retirar del parqueadero ";
+			Escribir "3. Consultar si se encuentra el vehiculo en el parqueadero";
+			Escribir "4. Terminar programa";
+			Leer option;
+			
+			Segun option Hacer
+				
+				1:
+					
+					flag2<-falso;
+					
+					
+					
+					si count<1 Entonces
+						
+						count<-count+1;
+						
+						Escribir "Ingrese su nombre completo separandolo por favor";
+						leer name1;
+						Escribir "Ingrese su numero de telefono";
+						Leer clientNumber1;
+						Escribir "Ingrese la matricula de su vehiculo";
+						Leer numberPlate1;
+						Escribir "Ingrese la marca de su vehiculo";
+						Leer brand1;
+						Escribir "";
+						Escribir "Vehiculo Ingresado";
+						Limpiar Pantalla;
+						Escribir "Ingrese su nombre completo separandolo por favor";
+						leer name2;
+						Escribir "Ingrese su numero de telefono";
+						Leer clientNumber2;
+						Escribir "Ingrese la matricula de su vehiculo";
+						Leer numberPlate2;
+						Escribir "Ingrese la marca de su vehiculo";
+						Leer brand2;
+						Escribir "";
+						Escribir "Vehiculo Ingresado";
+						Limpiar Pantalla;Escribir "Ingrese su nombre completo separandolo por favor";
+						leer name3;
+						Escribir "Ingrese su numero de telefono";
+						Leer clientNumber3;
+						Escribir "Ingrese la matricula de su vehiculo";
+						Leer numberPlate3;
+						Escribir "Ingrese la marca de su vehiculo";
+						Leer brand3;
+						Escribir "";
+						Escribir "Vehiculo Ingresado";
+						Limpiar Pantalla;Escribir "Ingrese su nombre completo separandolo por favor";
+						leer name4;
+						Escribir "Ingrese su numero de telefono";
+						Leer clientNumber4;
+						Escribir "Ingrese la matricula de su vehiculo";
+						Leer numberPlate4;
+						Escribir "Ingrese la marca de su vehiculo";
+						Leer brand4;
+						Escribir "";
+						Escribir "Vehiculo Ingresado";
+						Limpiar Pantalla;Escribir "Ingrese su nombre completo separandolo por favor";
+						leer name5;
+						Escribir "Ingrese su numero de telefono";
+						Leer clientNumber5;
+						Escribir "Ingrese la matricula de su vehiculo";
+						Leer numberPlate5;
+						Escribir "Ingrese la marca de su vehiculo";
+						Leer brand5;
+						Escribir "";
+						Escribir "Vehiculo Ingresado";
+						Limpiar Pantalla;
+						
+						
+						Escribir ("TODOS LOS VEHICULOS FUERON INGRESADOS SATISFATORIAMENTE");
+						
+					SiNo
+						Limpiar Pantalla;
+						Escribir "";
+						Escribir "¡¡¡¡PARQUEADERO LLENO CAPACIDAD MAXIMA 5 VEHICULOS!!!!!!";
+						Escribir "";
+						
+					FinSi
+					
+					
+				2:
+					
+					si flag2==Verdadero Entonces
+						Limpiar Pantalla;
+						Escribir "No se han ingresado datos por el momento";
+						Escribir "";
+					SiNo
+						
+						Escribir "Ingrese el numero de su matricula";
+						Leer dataPlate1;
+						Escribir "Ingrese la marca de su vehiculo";
+						Leer dataBrand1;
+						Escribir "Ingrese su nombre completo separandolo por favor";
+						leer dataNameC1;
+						Escribir "Por ultimo ingrese su numero celular para llamarlo y verificar la retirada del vehiculo";
+						leer dataNumberC1;
+						
+						si  dataPlate1==numberPlate1 Y dataBrand1==brand1 Y dataNameC1==name1 Y dataNumberC1==clientNumber1 Entonces
+							
+							
+							Escribir "Vehiculo retirado";
+							
+							
+						FinSi
+						si  dataPlate1==numberPlate2 Y dataBrand1==brand2 Y dataNameC1==name2 Y dataNumberC1==clientNumber2 Entonces
+							
+							
+							Escribir "Vehiculo retirado";
+							
+						FinSi
+						si  dataPlate1==numberPlate3 Y dataBrand1==brand3 Y dataNameC1==name3 Y dataNumberC1==clientNumber3 Entonces
+							
+							
+							Escribir "Vehiculo retirado";
+							
+							
+						FinSi
+						
+						si  dataPlate1==numberPlate4 Y dataBrand1==brand4 Y dataNameC1==name4 Y dataNumberC1==clientNumber4 Entonces
+							
+							
+							Escribir "Vehiculo retirado";
+							
+						FinSi
+						si  dataPlate1==numberPlate5 Y dataBrand1==brand5 Y dataNameC1==name5 Y dataNumberC1==clientNumber5 Entonces
+							
+							
+							Escribir "Vehiculo retirado";
+							
+						FinSi
+						
+						Escribir ("Datos erroneos");
+						
+						
+					
+						
+						
+					FinSi
+					
+					
+				3:
+					
+					si flag2==Verdadero Entonces
+						Limpiar Pantalla;
+						Escribir "No se han ingresado datos por el momento";
+						Escribir "";
+					SiNo
+						
+						
+						Escribir "Ingrese la marca de su vehiculo";
+						Leer dataBrand2;
+						
+						Escribir "Ingrese el numero de su matricula";
+						Leer dataPlate2;
+						
+						si   dataBrand2==brand1 Y dataPlate2==numberPlate1  Entonces
+							
+							
+							Escribir "El vehiculo se encuentra en el parqueadero";
+							
+						SiNo
+							
+							si   dataBrand2==brand2 Y dataPlate2==numberPlate2  Entonces
+								Escribir "El vehiculo se encuentra en el parqueadero";
+								
+								
+							FinSi
+							si   dataBrand2==brand3 Y dataPlate2==numberPlate3  Entonces
+								
+								Escribir "El vehiculo se encuentra en el parqueadero";
+								
+							FinSi
+							si   dataBrand2==brand4 Y dataPlate2==numberPlate4  Entonces
+								
+								Escribir "El vehiculo se encuentra en el parqueadero";
+								
+							FinSi
+							
+							si   dataBrand2==brand5 Y dataPlate2==numberPlate5  Entonces
+								Escribir "El vehiculo se encuentra en el parqueadero";
+								
+								
+							FinSi
+							
+							Escribir ("No esta en el parqueadero");
+							
+						
+					finsi
+					
+				FinSi
+				
+					
+					
+				4:
+					
+					flag<-Falso;
+					
+				De Otro Modo:
+					
+					Escribir "Ingrese una opcion valida";
+					
+					
+			FinSegun
+			
+		FinMientras
+		
+		
+	FinSubProceso
+	
+	Proceso point2_7
+		Definir flag Como Logico;
+		flag<-getflag();
+		showflag(flag);
+	FinProceso
+	
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../PSEint/Taller_5.html">VOLVER ATRAS</a>
+</body>
+</html>

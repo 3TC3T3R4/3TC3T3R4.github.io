@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p class="titulo">
+    Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.
+	<pre>
+		1.Capturar nombre
+		2.Saludar persona
+		3.Salir del sistema
+
+	</pre>
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+		Proceso point5
+	
+		Definir option Como Entero;
+		Definir op Como Logico;
+		Definir text Como Caracter;
+		op<-Verdadero;
+		
+		Mientras op == Verdadero Hacer
+			
+			Escribir "1.Capturar nombre";
+			Escribir "2.Saludar persona";
+			Escribir "3.Salir del sistema";
+			Leer option;
+			
+			
+			Segun option Hacer
+				
+				
+				1:
+					Escribir "Ingrese el nombre";
+					leer text;
+					Escribir "Desea salir del sistema?";
+					Escribir "1. SI";
+					Escribir "2. No";
+					Leer option;
+					
+					Limpiar Pantalla;
+					si option==1 Entonces
+						op<-Falso;
+					FinSi
+					
+					
+				2:
+					
+					Escribir "Ingrese el saludo a enviar";
+					Leer  text;
+					Escribir "Desea salir del sistema?";
+					Escribir "1. SI";
+					Escribir "2. No";
+					Leer option;
+					Limpiar Pantalla;
+					
+					si option==1 Entonces
+						op<-Falso;
+					FinSi
+					
+				3:
+					
+				op <- Falso;
+					
+					
+				De Otro Modo:
+					Escribir"Ingrese un numero correcto";
+				
+				
+			FinSegun
+			
+			
+			
+			
+		FinMientras
+		
+		
+		
+		
+		
+		
+	FinProceso
+	
+
+
+
+    </pre>
+</p>
+
+
+<a class="regresar" href="../../PSEint/Taller_3.html">VOLVER ATRAS</a>
+
+</body>
+</html>

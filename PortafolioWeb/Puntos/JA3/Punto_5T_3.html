@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.
+	<pre>
+		1.Capturar nombre
+		2.Saludar persona
+		3.Salir del sistema
+
+	</pre>
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+		
+package test;
+
+
+public class TestNum {
+
+	public static void main(String[] args) {
+		
+		Process process = new Process();
+		process.getinfo();
+		process.showinfo();
+		
+	
+	}
+
+	
+}
+
+
+
+
+package test;
+
+import java.util.Scanner;
+
+
+public class Process {
+	
+Scanner keyboard = new Scanner(System.in);
+private boolean option;
+private int option2;
+private String text;
+
+	public void getinfo(){
+ 
+	option = true;
+		
+	}
+
+
+	public  void showinfo() {
+		
+		while (option==true) {			
+			
+			
+			System.out.println("1.Captura nombre\n2.Saludar persona\n3.Salir del sistema");
+			option2=keyboard.nextInt();
+			keyboard.nextLine();
+		
+		switch (option2) {
+			case 1:
+				
+				System.out.println("Ingrese el nombre");
+				text=keyboard.nextLine();
+				
+				System.out.println("Desea salir del programa?\n1.SI\n2.NO");
+				option2=keyboard.nextInt();
+				
+				if(option2==1){
+				
+				option=false;
+				
+				}
+				
+				break;
+			
+			case 2:
+			
+				
+				System.out.println("Ingrese el saludo");
+				text=keyboard.nextLine();
+				System.out.println("Desea salir del programa?\n1.SI\n2.NO");
+				option2=keyboard.nextInt();
+				
+				if(option2==1){
+				
+				option=false;
+				
+				}
+				
+				
+				break;
+			
+			case 3:
+				
+				option=false;
+				
+				break;
+			
+			
+			default:
+		}
+		
+			
+			
+	}		
+		
+		
+		
+		
+}
+
+	
+
+}
+
+
+
+
+
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../Java/Taller_3.html">VOLVER ATRAS</a>
+</body>
+</html>

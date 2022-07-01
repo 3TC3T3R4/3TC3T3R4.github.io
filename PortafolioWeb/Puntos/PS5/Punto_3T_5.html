@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.
+En modo funciones.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+    
+SubProceso age <- obteneredad ()
+Definir age Como Entero;
+Escribir "Digite su edad";
+leer age;
+
+FinSubProceso
+
+SubProceso name <- obtenernombre ()
+Definir name Como Caracter;
+Escribir "Digite su nombre";
+leer name;
+
+FinSubProceso
+SubProceso lastname <- obtenerapellidos()
+Definir lastname Como Caracter;
+Escribir "Digite sus apellidos";
+leer lastname;
+
+FinSubProceso
+
+
+
+SubProceso mostrarinfo (age,name,lastname)
+Si age>=18 Entonces
+	
+	Escribir name," ",lastname," usted es mayor de edad, por lo tanto puede entrar a la fiesta.";
+	
+Sino 
+	
+	Escribir name," ",lastname," usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.";
+	
+FinSi
+
+FinSubProceso
+
+
+Proceso point1_3
+Definir age Como Entero;
+Definir name,lastname Como Caracter; 
+age<-obteneredad();
+name<-obtenernombre();
+lastname<-obtenerapellidos();
+mostrarinfo(age,name,lastname);
+
+FinProceso
+
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../PSEint/Taller_5.html">VOLVER ATRAS</a>
+
+</body>
+</html>

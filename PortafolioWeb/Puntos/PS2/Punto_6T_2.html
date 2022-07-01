@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p class="titulo">
+    El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+		Proceso point6
+	
+		Definir name,color,observation Como Caracter;
+		Definir  number_Plate,option,option2 Como Entero;
+		Escribir "Bienvenido(a) al taller de motos EL MAQUINISTA selecciona la opcion que vas a realizar";
+		Escribir "presiona 1. Para registrar el ingreso de tu motocicleta";
+		Escribir "presiona 2. Para generar el registro de salida de las novedades de tu motocicleta";
+		Escribir "presiona 3. Para poder observar los cambios realizados en tu motocicleta";
+		leer option;
+		Limpiar Pantalla;
+		si option == 2 o option ==3 Entonces
+			
+			Escribir "Debes generar primero el registro de ingreso  de tu motocicleta";
+		SiNo
+			Escribir "La siguiente informacion sera el soporte de ingreso de su vehiculo";
+			Escribir "Ingrese el numero de  matricula de su motocicleta";
+			leer number_Plate;
+			Escribir "Ingrese el nombre del dueño de la motocicleta";
+			leer name;
+			Escribir "Ingrese el color de su vehiculo";
+			Leer color;
+			Escribir "Ingrese las observaciones que tiene su motocicleta";
+			leer observation;
+			Limpiar Pantalla;
+			Escribir "";
+			Escribir "presiona 2. Para generar el registro de salida de las novedades de tu motocicleta";
+			Escribir "presiona 3. Para poder observar los cambios realizados  en tu motocicleta";
+			Leer option2;
+			Limpiar Pantalla;
+			Segun option2 hacer
+				2: 
+					Escribir name," el vehiculo con numero de placa: ",number_Plate,", Color: ",color," sale de nuestro taller con las siguientes novedades.";
+					Escribir "";
+					Escribir "-Presenta fugas de aceite en la carcasa del motor.";
+					Escribir "-El radiador presenta defectos en el enfriamiento.";
+					Escribir "";
+					Escribir "¿Quisieras saber los arreglos realizados?";
+					Escribir " ";
+					Escribir "1. SI";
+					Escribir "0. NO";
+					Leer option2;
+					Limpiar Pantalla;
+					si option2 == 1 Entonces
+						Escribir "La motocicleta con  numero de placa ",number_Plate," se le realizo recontruccion de carcasa frontal";
+						Escribir "Se le agrego nuevo liquido refrigerante y ajuste de entradas de radiador";
+						Escribir "";
+						Escribir "Fue placer tu visita por nuestro taller.";
+					SiNo
+						Escribir "Fue un placer tu visita por nuestro taller.";
+					FinSi
+				3:
+					Escribir "La motocicleta con  numero de placa ",number_Plate," se le realizo recontruccion de carcasa frontal";
+					Escribir "Se le agrego nuevo liquido refrigerante y ajuste de entradas de radiador";
+				De Otro Modo:
+					Escribir "Recuerda seleccionar una opcion valida :) ";
+			FinSegun
+		FinSi
+	FinProceso
+	
+
+
+    </pre>
+</p>
+
+
+<a class="regresar" href="../../PSEint/Taller_2.html">VOLVER ATRAS</a>
+</body>
+</html>

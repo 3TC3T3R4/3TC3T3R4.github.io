@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+	La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+		/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package test;
+
+/**
+ *
+ * @author 4dm1n1str4t0r
+ */
+public class TestCourse {
+	public static void main(String[] args) {
+		
+		Process process = new Process();
+		process.getflag();
+		process.showinfo();
+		
+		
+	}
+	
+	
+}
+
+
+
+
+
+package mx.com.Etcetera;
+
+
+public class Person {
+
+
+	private  String name;
+	private  int id;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	
+	
+
+
+
+	
+}
+
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package test;
+
+import java.util.Random;
+import java.util.Scanner;
+import mx.com.Etcetera.Person;
+
+/**
+ *
+ * @author 4dm1n1str4t0r
+ */
+public class Process {
+	Scanner keyboard = new Scanner(System.in);
+	Person person1 = new Person();
+	Person person2 = new Person();
+	Person person3 = new Person();
+	Person person4 = new Person();
+	Person person5 = new Person();
+	Person person6 = new Person();
+	Person person7 = new Person();
+	Person person8 = new Person();
+	private boolean flag;
+	private boolean flag2;
+	private int option;
+	private int mistakes1;
+	private int mistakes2;
+	private int mistakes3;
+	private int mistakes4;
+	private int mistakes5;
+	private int mistakes6;
+	private int mistakes7;
+	private int mistakes8;
+	private int count;
+	
+	
+	
+	
+	public void getflag(){
+	count=0;
+	flag =true;
+	flag2=true;
+
+	}
+	
+	
+	public void showinfo(){
+		
+	while(flag==true){
+		
+		System.out.println("Bienvenido a la escuela EL MAESTRO");
+		System.out.println("Seleccione una opcion\n1.Registrarse en el curso\n2.Consultar personas que realizaron el curso\n3.Consultar resultados de aprobacion\n4.Salir del programa");
+		option=keyboard.nextInt();
+		keyboard.nextLine();
+		
+		
+		
+		switch (option) {
+			case 1:
+		
+				flag2=false;
+				
+				if(count<1){
+					
+				count=count+1;
+				
+					System.out.println("Ingrese su nombre por favor");
+					person1.setName(keyboard.nextLine());
+					System.out.println("Ingrese el numero de su documento");
+					person1.setId(keyboard.nextInt());
+					System.out.println("Registro realizado");
+					mistakes1 = (int)(Math.random()*5);
+					keyboard.nextLine();
+					
+					System.out.println("Ingrese su nombre por favor");
+					person2.setName(keyboard.nextLine());
+					System.out.println("Ingrese el numero de su documento");
+					person2.setId(keyboard.nextInt());
+					System.out.println("Registro realizado");
+					mistakes2 = (int)(Math.random()*5);
+					keyboard.nextLine();
+					
+					System.out.println("Ingrese su nombre por favor");
+					person3.setName(keyboard.nextLine());
+					System.out.println("Ingrese el numero de su documento");
+					person3.setId(keyboard.nextInt());
+					System.out.println("Registro realizado");
+					mistakes3 = (int)(Math.random()*5);
+					keyboard.nextLine();
+					
+					System.out.println("Ingrese su nombre por favor");
+					person4.setName(keyboard.nextLine());
+					System.out.println("Ingrese el numero de su documento");
+					person4.setId(keyboard.nextInt());
+					System.out.println("Registro realizado");
+					mistakes4 = (int)(Math.random()*5);
+					keyboard.nextLine();
+					
+					System.out.println("Ingrese su nombre por favor");
+					person5.setName(keyboard.nextLine());
+					System.out.println("Ingrese el numero de su documento");
+					person5.setId(keyboard.nextInt());
+					System.out.println("Registro realizado");
+					mistakes5 = (int)(Math.random()*5);
+					keyboard.nextLine();
+					
+					System.out.println("Ingrese su nombre por favor");
+					person6.setName(keyboard.nextLine());
+					System.out.println("Ingrese el numero de su documento");
+					person6.setId(keyboard.nextInt());
+					System.out.println("Registro realizado");
+					mistakes6 = (int)(Math.random()*5);
+					keyboard.nextLine();
+					
+					System.out.println("Ingrese su nombre por favor");
+					person7.setName(keyboard.nextLine());
+					System.out.println("Ingrese el numero de su documento");
+					person7.setId(keyboard.nextInt());
+					System.out.println("Registro realizado");
+					mistakes7 = (int)(Math.random()*5);
+					keyboard.nextLine();
+					
+					System.out.println("Ingrese su nombre por favor");
+					person8.setName(keyboard.nextLine());
+					System.out.println("Ingrese el numero de su documento");
+					person8.setId(keyboard.nextInt());
+					System.out.println("Registro realizado");
+					mistakes8 = (int)(Math.random()*5);
+					keyboard.nextLine();
+					
+					
+					
+					
+					
+					System.out.println("PERSONAS REGISTRADAS SATISFACTORIAMENTE");
+					System.out.println("");
+				}else{
+				
+					System.out.println("Registros para el curso llego a su capacidad maxima de 8 personas");
+					System.out.println("");
+				}
+				
+				
+				
+				break;
+				
+				
+				
+				
+			case 2:
+				
+				if(flag2 == true){
+				
+					System.out.println("No se han ingresado datos hasta el momento");
+					System.out.println("");
+				
+				}else{
+				
+				
+					System.out.println("Las personas que han presentado el curso son:");
+					
+					System.out.println("Nombre: "+person1.getName()+" Cedula #"+person1.getId());
+					System.out.println("Nombre: "+person2.getName()+" Cedula #"+person2.getId());
+					System.out.println("Nombre: "+person3.getName()+" Cedula #"+person3.getId());
+					System.out.println("Nombre: "+person4.getName()+" Cedula #"+person4.getId());
+					System.out.println("Nombre: "+person5.getName()+" Cedula #"+person5.getId());
+					System.out.println("Nombre: "+person6.getName()+" Cedula #"+person6.getId());
+					System.out.println("Nombre: "+person7.getName()+" Cedula #"+person7.getId());
+					System.out.println("Nombre: "+person8.getName()+" Cedula #"+person8.getId());
+					
+					System.out.println("");
+					System.out.println("");
+				
+				}
+				
+				
+				
+				break;
+			case 3:
+				if(flag2==true){
+				
+					System.out.println("No se han ingresado datos hasta el momento");
+					System.out.println("");
+				
+				}else{
+				
+				if(mistakes1<2){
+					
+					System.out.println("NOMBRE: "+person1.getName());
+					System.out.println("EXAMEN APROBADO");
+					
+				}else{
+					
+					System.out.println("NOMBRE: "+person1.getName());
+					System.out.println("EXAMEN REPROBADO");
+				
+				}
+					System.out.println("");
+				if(mistakes2<2){
+					
+					System.out.println("NOMBRE: "+person2.getName());
+					System.out.println("EXAMEN APROBADO");
+					
+				}else{
+					
+					System.out.println("NOMBRE: "+person2.getName());
+					System.out.println("EXAMEN REPROBADO");
+				
+				}
+					System.out.println("");
+				if(mistakes3<2){
+					
+					System.out.println("NOMBRE: "+person3.getName());
+					System.out.println("EXAMEN APROBADO");
+					
+				}else{
+					
+					System.out.println("NOMBRE: "+person3.getName());
+					System.out.println("EXAMEN REPROBADO");
+				
+				}
+					System.out.println("");
+				if(mistakes4<2){
+				
+					System.out.println("NOMBRE: "+person4.getName());
+					System.out.println("EXAMEN APROBADO");
+					
+				}else{
+				
+					System.out.println("NOMBRE: "+person4.getName());
+					System.out.println("EXAMEN REPROBADO");
+				
+				}
+					System.out.println("");
+				if(mistakes5<2){
+				
+					System.out.println("NOMBRE: "+person5.getName());
+					System.out.println("EXAMEN APROBADO");
+					
+				}else{
+				
+					System.out.println("NOMBRE: "+person5.getName());
+					System.out.println("EXAMEN REPROBADO");
+				
+				}
+				
+				if(mistakes6<2){
+				
+					System.out.println("NOMBRE: "+person6.getName());
+					System.out.println("EXAMEN APROBADO");
+					
+				}else{
+				
+					System.out.println("NOMBRE: "+person6.getName());
+					System.out.println("EXAMEN REPROBADO");
+				
+				}
+				
+				if(mistakes7<2){
+				
+					System.out.println("NOMBRE: "+person7.getName());
+					System.out.println("EXAMEN APROBADO");
+					
+				}else{
+				
+					System.out.println("NOMBRE: "+person7.getName());
+					System.out.println("EXAMEN REPROBADO");
+				
+				}
+				
+				if(mistakes8<2){
+				
+					System.out.println("NOMBRE: "+person8.getName());
+					System.out.println("EXAMEN APROBADO");
+					
+				}else{
+				
+					System.out.println("NOMBRE: "+person8.getName());
+					System.out.println("EXAMEN REPROBADO");
+				
+				}
+				
+				
+				
+				
+					System.out.println("");
+				
+					System.out.println("");
+			}
+				
+				
+				break;
+				
+			case 4:
+				flag=false;
+				break;
+			default:
+				
+				System.out.println("INGRESE UNA OPCION CORRECTA");
+		}
+	
+	
+	
+	
+	
+	
+	
+	}
+	
+	
+	
+	
+	
+	}
+	
+	
+	
+}
+
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../Java/Taller_3.html">VOLVER ATRAS</a>
+
+</body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+		/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package test;
+
+/**
+ *
+ * @author 4dm1n1str4t0r
+ */
+public class TestParking {
+
+	public static void main(String[] args) {
+		
+		Process process = new Process();
+		process.getflag();
+		process.showinfo();
+		
+		
+	}
+
+	
+}
+
+
+
+
+
+package mx.com.Etcetera;
+
+
+public class Vehicle {
+	
+	
+	private int numberPlate;
+	private String brand;
+
+	public Vehicle(int numberPlate, String brand) {
+		this.numberPlate = numberPlate;
+		this.brand = brand;
+	}
+
+	public Vehicle() {
+	}
+
+	public int getNumberPlate() {
+		return numberPlate;
+	}
+
+	public void setNumberPlate(int numberPlate) {
+		this.numberPlate = numberPlate;
+	}
+
+	public String getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	
+	
+	
+	
+	
+}
+
+
+
+package mx.com.Etcetera;
+
+
+public class Person {
+	
+	private String name;		
+	private int tel;
+
+	public Person(String name, int tel) {
+		this.name = name;
+		this.tel = tel;
+	}
+
+	public Person() {
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getTel() {
+		return tel;
+	}
+
+	public void setTel(int tel) {
+		this.tel = tel;
+	}
+	
+	
+	
+}
+
+
+package test;
+
+import java.util.Scanner;
+import mx.com.Etcetera.Person;
+import mx.com.Etcetera.Vehicle;
+
+
+public class Process {
+		
+Scanner keyboard = new Scanner(System.in);
+Person person1 = new Person();
+Person person2 = new Person();
+Person person3 = new Person();
+Person person4 = new Person();
+Person person5 = new Person();
+
+Vehicle vehicle1= new Vehicle();
+Vehicle vehicle2= new Vehicle();
+Vehicle vehicle3= new Vehicle();
+Vehicle vehicle4= new Vehicle();
+Vehicle vehicle5= new Vehicle();
+
+private boolean flag;
+private boolean flag2;
+private  int option;
+private  int count;
+
+
+	
+	
+	public void getflag(){
+	flag = true;
+	flag2 = true;
+	
+	}
+
+	
+	public void showinfo(){
+		count=0;
+		
+		while(flag == true){
+		
+		System.out.println("Bienvenido al parqueadero el GUARDIAN\n selecciones accion que desea realizar\n \n1.Ingresar al parqueadero\n2.Retirar vehiculo del parqueadero\n3.Consultar si se encuentra el vehiculo en el parqueadero\n4.Terminar programa");
+		option=keyboard.nextInt();
+		System.out.println("");
+		keyboard.nextLine();
+		
+		
+		
+			switch (option) {
+				case 1:
+					
+					flag2=false;
+					
+					if(count<1){
+						count=count+1;
+						System.out.println("Ingrese su nombre por favor");
+						person1.setName(keyboard.nextLine());
+						System.out.println("Ingrese su numero de telefono");
+						person1.setTel(keyboard.nextInt());
+						System.out.println("Ingrese la matricula de su vehiculo");						  vehicle1.setNumberPlate(keyboard.nextInt());
+						keyboard.nextLine();
+						System.out.println("Ingrese la marca de su vehiculo");
+						vehicle1.setBrand(keyboard.nextLine());
+						System.out.println("VEHICULO INGRESADO");
+						
+						System.out.println("Ingrese su nombre por favor");
+						person2.setName(keyboard.nextLine());
+						System.out.println("Ingrese su numero de telefono");
+						person2.setTel(keyboard.nextInt());
+						System.out.println("Ingrese la matricula de su vehiculo");						  vehicle2.setNumberPlate(keyboard.nextInt());
+						keyboard.nextLine();
+						System.out.println("Ingrese la marca de su vehiculo");
+						vehicle2.setBrand(keyboard.nextLine());
+						System.out.println("VEHICULO INGRESADO");
+						
+						System.out.println("Ingrese su nombre por favor");
+						person3.setName(keyboard.nextLine());
+						System.out.println("Ingrese su numero de telefono");
+						person3.setTel(keyboard.nextInt());
+						System.out.println("Ingrese la matricula de su vehiculo");						  vehicle3.setNumberPlate(keyboard.nextInt());
+						keyboard.nextLine();
+						System.out.println("Ingrese la marca de su vehiculo");
+						vehicle3.setBrand(keyboard.nextLine());
+						System.out.println("VEHICULO INGRESADO");
+						
+						System.out.println("Ingrese su nombre por favor");
+						person4.setName(keyboard.nextLine());
+						System.out.println("Ingrese su numero de telefono");
+						person4.setTel(keyboard.nextInt());
+						System.out.println("Ingrese la matricula de su vehiculo");						  vehicle4.setNumberPlate(keyboard.nextInt());
+						keyboard.nextLine();
+						System.out.println("Ingrese la marca de su vehiculo");
+						vehicle4.setBrand(keyboard.nextLine());
+						System.out.println("VEHICULO INGRESADO");
+						
+						System.out.println("Ingrese su nombre por favor");
+						person5.setName(keyboard.nextLine());
+						System.out.println("Ingrese su numero de telefono");
+						person5.setTel(keyboard.nextInt());
+						System.out.println("Ingrese la matricula de su vehiculo");						  vehicle5.setNumberPlate(keyboard.nextInt());
+						keyboard.nextLine();
+						System.out.println("Ingrese la marca de su vehiculo");
+						vehicle5.setBrand(keyboard.nextLine());
+						System.out.println("");
+						System.out.println("VEHICULOS INGRESADOS");
+						System.out.println("");
+					
+					}else{
+					
+						System.out.println("PARQUEADERO LLENO, SU CAPACIDAD MAXIMA ES DE 5  VEHICULOS");
+					
+					}
+					
+					break;
+					
+					
+				case 2:
+					
+					
+					if(flag2==true){
+					
+						System.out.println("No se han ingresado datos hasta el momento");
+						System.out.println("");
+					}else{
+					
+					int dataPlate,datanumberC;
+					String dataName,dataBrand;
+						
+						
+						
+						System.out.println("Ingrese la marca de su vehiculo");
+						dataBrand=keyboard.nextLine();
+						System.out.println("Ingrese su nombre por favor");
+						dataName=keyboard.nextLine();
+						System.out.println("ingrese su numero de telefono");
+						datanumberC=keyboard.nextInt();
+						System.out.println("Ingrese el numero de su matricula");
+						dataPlate=keyboard.nextInt();
+						
+						if(dataBrand.equals(vehicle1.getBrand()) 
+							&& dataName.equals(person1.getName()) 
+							&& datanumberC == person1.getTel()
+							&& dataPlate==vehicle1.getNumberPlate()) {
+						
+							
+						System.out.println("VEHICULO RETIRADO, VUELVA PRONTO");
+						
+						
+						}else{
+						
+							if(dataBrand.equals(vehicle2.getBrand()) 
+							&& dataName.equals(person2.getName()) 
+							&& datanumberC == person2.getTel()
+							&& dataPlate==vehicle2.getNumberPlate()) {
+						
+						
+							System.out.println("VEHICULO RETIRADO, VUELVA PRONTO");
+						
+							}
+						
+							if(dataBrand.equals(vehicle3.getBrand()) 
+							&& dataName.equals(person3.getName()) 
+							&& datanumberC == person3.getTel()
+							&& dataPlate==vehicle3.getNumberPlate()) {
+						
+						
+							System.out.println("VEHICULO RETIRADO, VUELVA PRONTO");
+						
+							}
+							if(dataBrand.equals(vehicle4.getBrand()) 
+							&& dataName.equals(person4.getName()) 
+							&& datanumberC == person4.getTel()
+							&& dataPlate==vehicle4.getNumberPlate()) {
+						
+						
+							System.out.println("VEHICULO RETIRADO, VUELVA PRONTO");
+						
+							}
+							if(dataBrand.equals(vehicle5.getBrand()) 
+							&& dataName.equals(person5.getName()) 
+							&& datanumberC == person5.getTel()
+							&& dataPlate==vehicle5.getNumberPlate()) {
+						
+						
+							System.out.println("VEHICULO RETIRADO, VUELVA PRONTO");
+						
+							}
+							
+							
+					System.out.println("Los datos ingresados no son correctos con algun vehiculo del parqueadero");
+						
+					}
+						
+						
+						
+						
+						
+				}
+			break;	
+					
+					
+					
+					
+				case 3:
+					
+					if(flag2==true){
+					
+						System.out.println("No se han ingresado datos hasta el momento");
+						System.out.println("");
+					}else{
+					
+					
+						int dataPlate2;
+						String dataBrand2;
+						
+						
+						System.out.println("Ingrese la marca de su vehiculo");
+						dataBrand2 = keyboard.nextLine();
+						System.out.println("Ingrese el numero de su matricula");
+						dataPlate2 = keyboard.nextInt();
+						
+						 if(dataPlate2 == vehicle1.getNumberPlate() &&
+							dataBrand2.equals(vehicle1.getBrand())){
+							System.out.println("El vehiculo se encuentra en el parqueadero");
+						
+						}else{
+						
+							
+							if(dataPlate2 == vehicle2.getNumberPlate() &&
+							dataBrand2.equals(vehicle2.getBrand())){
+							System.out.println("El vehiculo se encuentra en el parqueadero");
+						
+						}
+							if(dataPlate2 == vehicle3.getNumberPlate() &&
+							dataBrand2.equals(vehicle3.getBrand())){
+							System.out.println("El vehiculo se encuentra en el parqueadero");
+						
+						}
+							if(dataPlate2 == vehicle4.getNumberPlate() &&
+							dataBrand2.equals(vehicle4.getBrand())){
+							System.out.println("El vehiculo se encuentra en el parqueadero");
+						
+						}
+							if(dataPlate2 == vehicle5.getNumberPlate() &&
+							dataBrand2.equals(vehicle5.getBrand())){
+							System.out.println("El vehiculo se encuentra en el parqueadero");
+						
+						}
+					
+							System.out.println("El vehiculo no se encuentra en el parqueadero");
+						
+						
+						}
+						
+						
+						
+					
+					}
+					
+				
+					break;
+					
+				
+				case 4:
+					
+					flag=false;
+					
+					break;
+					
+				default:
+					
+						System.out.println("Ingrese una opcion correcta");
+					break;
+			}
+		
+		
+		
+		}
+	
+	
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../Java/Taller_3.html">VOLVER ATRAS</a>
+
+</body>
+</html>

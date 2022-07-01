@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+		/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package test;
+
+import mx.com.Etecetera.Person;
+
+/**
+ *
+ * @author 4dm1n1str4t0r
+ */
+public class TestAge {
+	public static void main(String[] args) {
+		Person person1 = new Person();
+		person1.showinfo();
+	
+	}
+	
+	
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package mx.com.Etecetera;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author 4dm1n1str4t0r
+ */
+public class Person {
+
+	Scanner keyboard = new Scanner(System.in);
+	private String name;
+	private String lastname;
+	private int age;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public void showinfo() {
+
+		System.out.println("Ingrese su nombre");
+		name= keyboard.nextLine();
+		System.out.println("Ingrese su apellido");
+		lastname=keyboard.nextLine();
+		System.out.println("Ingrese su edad");
+		age=keyboard.nextInt();
+		if (age >= 18) {
+
+			System.out.println(name + " " + lastname + " Usted es mayor de edad por lo tanto puede entrar a la fiesta");
+
+		} else {
+
+			System.out.println(name + " " + lastname + " Usted es menor de edad, por lo tanto no puede entrar a la fiesta,"
+				+ " devuelvase a su casa");
+
+		}
+
+	}
+
+}
+
+
+
+
+
+
+    </pre>
+</p>
+
+
+
+<a  class="regresar" href="../../Java/Taller_2.html">VOLVER ATRAS</a>
+
+</body>
+</html>

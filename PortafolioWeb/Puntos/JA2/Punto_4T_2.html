@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+		
+package test;
+
+
+public class TestMovie {
+	
+	public static void main(String[] args) {
+			
+		Process process1 = new Process();
+		
+		process1.getinfo();
+		process1.showinfo();
+		
+	}
+	
+}
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package mx.com.Etcetera;
+
+/**
+ *
+ * @author 4dm1n1str4t0r
+ */
+public class Person {
+
+private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	
+}
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package test;
+
+import java.util.Scanner;
+import mx.com.Etcetera.Person;
+
+/**
+ *
+ * @author 4dm1n1str4t0r
+ */
+public class Process {
+
+	Scanner keyboard = new Scanner(System.in);
+	Person person1 = new Person();
+	private int option;
+	private int option2;
+	private String pqr;
+
+	public void getinfo() {
+
+		System.out.println("Bienvenido a nuestra tienda");
+		System.out.println("Selecciona la accion que quieras realizar");
+		System.out.println(" 1.Alquilar pelicula\n 2.Consultar peliculas disponibles\n 3.Hacer devolucion de peliculas");
+
+		option = keyboard.nextInt();
+
+	}
+
+	public void showinfo() {
+
+		switch (option) {
+			case 1:
+				System.out.println("Ingrese su nombre por favor");
+				person1.setName(keyboard.nextLine());
+				keyboard.nextLine();
+				System.out.println(person1.getName() + "Las peliculas que puedes alquilar son estas");
+				System.out.println("1.The walking dead\n 2.Harry Potter\n 3. BlackMirror");
+				option2 = keyboard.nextInt();
+
+				if (option2 == 1 || option2 == 2 || option2 == 3) {
+
+					System.out.println("Excelente opcion disfruta tu pelicula");
+
+				} else {
+
+					System.out.println("Selecciona una opcion correcta");
+
+				}
+
+				break;
+
+			case 2:
+
+				System.out.println("Estas son las peliculas  disponibles por el momento\n--The walking dead\n  --Harry Potter\n --BlackMirror");
+				break;
+
+			case 3:
+				System.out.println("Gracias por tu devolucion");
+				System.out.println("Tuviste algun inconveniente?\n 1.Si quiero presentar novedad\n 2.No se presento ninguna novedad");
+				option2 = keyboard.nextInt();
+
+				if (option2 == 1) {
+					System.out.println("Ingresa tu nombre para que la novedad sea tuya");
+					person1.setName(keyboard.nextLine());
+					keyboard.nextLine();
+					System.out.println("Cuentanos que paso?");
+					pqr = keyboard.nextLine();
+					keyboard.nextLine();
+					System.out.println("Gracias por la observacion trabajaremos en ello");
+
+				} else {
+
+					System.out.println("Esta bien gracias");
+
+				}
+
+		}
+
+	}
+
+}
+
+	
+
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../Java/Taller_2.html">VOLVER ATRAS</a>
+
+</body>
+</html>

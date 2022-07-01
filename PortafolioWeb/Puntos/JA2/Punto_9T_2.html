@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+		
+package test;
+
+
+public class TestFigure {
+	
+	
+	public static void main(String[] args) {
+		
+		Process process = new Process();
+		process.getinfo();
+		process.showinfo();
+
+	}
+
+
+}
+
+
+package test;
+
+import java.util.Scanner;
+import mx.com.Etcetera.Figure;
+
+
+public class Process {
+	
+	Scanner keyboard = new Scanner(System.in);
+	Figure figure = new Figure();
+	private int option;
+	
+	public void getinfo(){
+	
+		System.out.println("Bienvenido");
+		System.out.println("Ingrese que figura le gustaria conocer su area\n 1.Rectangulo\n 2.Triangulo\n 3.Trapecio");
+		option=keyboard.nextInt();
+	
+	}
+	
+	public void showinfo(){
+		
+		
+		switch (option) {
+			case 1:
+				
+				System.out.println("Ingrese la base del rectangulo");
+				figure.setBase(keyboard.nextInt());
+				
+				System.out.println("Ingrese la altura del rectangulo");
+				figure.setHeight(keyboard.nextInt());
+				
+				figure.setArea(figure.getBase()*figure.getHeight());
+				System.out.println("La area del rectangulo es: " + figure.getArea()+"Cm²");
+				break;
+			
+			case 2:
+				
+				System.out.println("Ingrese la base del triangulo");
+				figure.setBase(keyboard.nextInt());
+				
+				System.out.println("Ingrese la altura del triangulo");
+				figure.setHeight(keyboard.nextInt());
+				
+				figure.setArea((figure.getBase()*figure.getHeight())/2);
+				System.out.println("La area del triangulo es: " + figure.getArea()+"Cm²");
+				break;
+				
+				
+			
+			case 3:
+				
+				System.out.println("Ingrese la base  mayor del trapecio");
+				figure.setBaseMax(keyboard.nextInt());
+				
+				System.out.println("Ingrese la base menor del trapecio");
+				figure.setBaseMin(keyboard.nextInt());
+				
+				System.out.println("Ingrese la altura del trapecio");
+				figure.setHeight(keyboard.nextInt());
+				
+				figure.setArea(((figure.getBase()+figure.getHeight())*figure.getHeight())/2);
+				System.out.println("La area del triangulo es: " + figure.getArea()+"Cm²");
+				break;
+					
+			default:
+				
+			System.out.println("Ingrese una opcion correcta");
+				
+		}
+	
+	
+	
+	
+	}
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+package mx.com.Etcetera;
+
+
+public class Figure {
+	
+	private float area;
+	private float height;
+	private float base;
+	private float baseMax;
+	private float baseMin;
+	
+	public float getArea() {
+		return area;
+	}
+
+	public void setArea(float area) {
+		this.area = area;
+	}
+
+	public float getHeight() {
+		return height;
+	}
+
+	public void setHeight(float height) {
+		this.height = height;
+	}
+
+	public float getBase() {
+		return base;
+	}
+
+	public void setBase(float base) {
+		this.base = base;
+	}
+
+	public float getBaseMax() {
+		return baseMax;
+	}
+
+	public void setBaseMax(float baseMax) {
+		this.baseMax = baseMax;
+	}
+
+	public float getBaseMin() {
+		return baseMin;
+	}
+
+	public void setBaseMin(float baseMin) {
+		this.baseMin = baseMin;
+	}
+	
+	
+}
+
+
+
+	
+
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../Java/Taller_2.html">VOLVER ATRAS</a>
+
+</body>
+</html>

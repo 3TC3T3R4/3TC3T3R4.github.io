@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>Se debe de imprimir el siguiente cuadro
+<pre>
+	-----------------------------------------------------------------------COLUMNAS--------------------------------------------------------
+
+	  [0]             [1]             [2]             [3]             [4]             [5]             [6]             [7]             [8]             [9]
+
+  [0]
+	  [1X1]           [2X1]           [3X1]           [4X1]           [5X1]           [6X1]           [7X1]           [8X1]           [9X1]           [10X1]
+  [1]
+	  [1X2]           [2X2]           [3X2]           [4X2]           [5X2]           [6X2]           [7X2]           [8X2]           [9X2]           [10X2]
+  [2]
+	  [1X3]           [2X3]           [3X3]           [4X3]           [5X3]           [6X3]           [7X3]           [8X3]           [9X3]           [10X3]
+F [3]
+	  [1X4]           [2X4]           [3X4]           [4X4]           [5X4]           [6X4]           [7X4]           [8X4]           [9X4]           [10X4]
+I [4]
+	  [1X5]           [2X5]           [3X5]           [4X5]           [5X5]           [6X5]           [7X5]           [8X5]           [9X5]           [10X5]
+L [5]
+	  [1X6]           [2X6]           [3X6]           [4X6]           [5X6]           [6X6]           [7X6]           [8X6]           [9X6]           [10X6]
+A [6]
+	  [1X7]           [2X7]           [3X7]           [4X7]           [5X7]           [6X7]           [7X7]           [8X7]           [9X7]           [10X7]
+S [7]
+	  [1X8]           [2X8]           [3X8]           [4X8]           [5X8]           [6X8]           [7X8]           [8X8]           [9X8]           [10X8]
+  [8]
+	  [1X9]           [2X9]           [3X9]           [4X9]           [5X9]           [6X9]           [7X9]           [8X9]           [9X9]           [10X9]
+  [9]
+	  [1X10]          [2X10]          [3X10]          [4X10]          [5X10]          [6X10]          [7X10]          [8X10]          [9X10]          [10X10]
+
+
+</pre>
+El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe estar previamente calculado en una matriz bidimensional la cual cada resultado obedecerá a la fila y columna insertada por el usuario.
+En modo funciones.
+
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+    
+SubProceso  showresult ()
+Definir fila,columna,matrix2,x,k,i,j como Entero;
+Dimension matrix2(10,10);
+
+x<-1;
+k<-1;
+Para i<-0 hasta 9 Con Paso 1 Hacer
+	
+	Para j<-0 Hasta 9 Con Paso 1 Hacer
+		matrix2[i,j]<-k*x;
+		k<-k+1;
+	FinPara
+	k<-1;
+	x<-x+1;
+	
+FinPara
+
+Escribir "Ingrese la fila que desea seleccionar";
+leer fila;
+Escribir "Ingrese la columna que desea seleccionar";
+leer columna;
+
+Escribir"El resultado de la multiplicacion es: ",matrix2[fila,columna]; 
+
+
+FinSubProceso
+
+SubProceso getinfo ()
+
+Definir matrix,vectorfilas,vectorcolumnas,i,j,contador Como Entero;
+Definir filas Como Caracter;
+Dimension matrix(10,10);
+Dimension vectorcolumnas[10];
+Dimension vectorfilas[10];
+Dimension filas[10];
+contador<-1;
+Escribir "-----------------------------------------------------------------------COLUMNAS--------------------------------------------------------";
+Escribir "";
+Para i<-0 Hasta 9 Con Paso 1 Hacer
+	vectorcolumnas[i]<-i;
+	vectorfilas[i]<-i;		
+FinPara
+filas[0]<-"";
+filas[1]<-"";
+filas[2]<-"";
+filas[3]<-"F";
+filas[4]<-"I";
+filas[5]<-"L";
+filas[6]<-"A";
+filas[7]<-"S";
+filas[8]<-"";
+filas[9]<-"";
+
+Para i<-0 Hasta 9 Con Paso 1 Hacer
+	Escribir ,"          [",vectorcolumnas[i],"]   " Sin Saltar;
+FinPara
+Escribir "";
+Escribir "";
+Para i<-0 hasta 9 Con Paso 1 Hacer
+	
+	Para j<-0 Hasta 9 Con Paso 1 Hacer
+		matrix[i,j]<-j+1;
+	FinPara
+
+	
+FinPara
+
+
+Para i<-0 Hasta 9 Con Paso 1 Hacer
+	Escribir filas[i],"  "Sin Saltar;
+	Escribir"[",vectorfilas[i],"]";
+	contador<-1+i;
+	
+	Para j<-0 Hasta 9 Con Paso 1 Hacer
+		
+		Escribir "           [",matrix[i,j],"X",contador,"]" Sin Saltar;
+		
+	FinPara
+	
+	
+	Escribir "";
+	
+FinPara
+
+Escribir "";
+Escribir "";
+
+
+FinSubProceso
+
+Proceso point3_5
+getinfo();
+showresult();
+FinProceso
+
+
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../PSEint/Taller_5.html">VOLVER ATRAS</a>
+</body>
+</html>

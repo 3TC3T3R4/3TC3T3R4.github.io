@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+		/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package test;
+
+/**
+ *
+ * @author 4dm1n1str4t0r
+ */
+public class TestImc {
+	public static void main(String[] args) {
+		
+		ProcessImc process1 = new ProcessImc();
+		process1.getinfo();
+		process1.showinfo();
+		
+		
+	}
+}
+
+
+package mx.com.Etcetera;
+
+public class Person {
+	
+	private  float height;
+	private  float weight;
+	private	 float imc;
+
+	public float getHeight() {
+		return height;
+	}
+
+	public void setHeight(float height) {
+		this.height = height;
+	}
+
+	public float getWeight() {
+		return weight;
+	}
+
+	public void setWeight(float weight) {
+		this.weight = weight;
+	}
+
+	public float getImc() {
+		return imc;
+	}
+
+	public void setImc(float imc) {
+		this.imc = imc;
+	}
+
+	
+	
+}
+
+
+
+
+package test;
+
+import java.util.Scanner;
+import mx.com.Etcetera.Person;
+
+
+public class ProcessImc {
+	
+	Scanner  keyboard = new Scanner(System.in);
+	Person person1 = new Person();
+	private float result;
+	
+	public void getinfo(){
+	
+		System.out.println("Ingrese su peso");
+		person1.setWeight(keyboard.nextFloat());
+		System.out.println("Ingrese su estatura");
+		person1.setHeight(keyboard.nextFloat());
+		
+		result = person1.getHeight();
+		
+		result = (float)Math.pow(result,2);
+		
+		person1.setImc(person1.getWeight()/result);
+	
+	}
+	
+	
+	public void showinfo(){
+	
+		if(person1.getImc()<18.5){
+			
+			System.out.println("Su indice de masa corporal es: "  + person1.getImc());
+			System.out.println("Usted alctualmente esta en el rango: BAJO DE PESO");
+			
+		}else if(person1.getImc()>=18.5 && person1.getImc()<=24.9){
+		
+			
+			System.out.println("Su indice de masa corporal es: "  + person1.getImc());
+			System.out.println("Usted actualmente esta en el rango: NORMAL");
+		
+		
+		
+		}else if(person1.getImc()>=25.0 && person1.getImc()<=29.9){
+		
+			
+			System.out.println("Su indice de masa corporal es: "  + person1.getImc());
+			System.out.println("Usted actualmente esta en el rango: SOBREPESO");
+		
+		}else{
+		
+			System.out.println("Su indice de masa corporal es: "  + person1.getImc());
+			System.out.println("Usted actualmente esta en el rango: OBESO");
+		
+		
+		}
+	
+	
+	}
+	
+}
+
+
+
+
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../Java/Taller_2.html">VOLVER ATRAS</a>
+
+</body>
+</html>

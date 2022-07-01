@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que
+
+	<pre>
+		
+		    *
+	 	   ***
+	          *****
+	         *******
+		*********
+	       ***********
+	      *************
+	     ***************
+ 	    *****************
+           *******************
+          *********************
+		   ***
+		   ***
+		  *****
+		 *******
+
+
+	</pre>
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+		
+package test;
+
+
+public class TestFigure {
+	public static void main(String[] args) {
+		
+		Process process = new Process();
+		process.getfigure();
+		
+	}
+}
+
+
+package test;
+
+
+public class Process {
+	
+ 	
+private int asterisco;	
+private int space;
+int i=1;
+	
+	public void getfigure(){
+	
+		do {			
+			
+			space=1;
+			while(space<13-i){
+			System.out.print(" ");
+			space=space+1;
+			}	
+		
+		
+			
+			for (asterisco = 1; asterisco<=i; asterisco++) {
+			System.out.print("*");
+			}
+		
+			asterisco=1;
+		
+			while(asterisco<i){
+			System.out.print("*");
+			asterisco=asterisco+1;
+			}
+		
+			System.out.println(" ");
+			i=i+1;
+			
+		} while (i<12);
+System.out.println("          ***");
+System.out.println("          ***");
+System.out.println("         *****");
+System.out.println("        *******");
+	}
+	
+}
+
+
+
+
+    
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../Java/Taller_3.html">VOLVER ATRAS</a>
+</body>
+</html>

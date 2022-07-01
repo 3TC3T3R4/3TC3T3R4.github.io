@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+		package test;
+
+
+public class TestPharmacy {
+	
+	public static void main(String[] args) {
+			
+		Process process1 = new Process();
+		
+		process1.getinfo();
+		process1.showinfo();
+		
+	}
+	
+	
+	
+	
+}
+
+
+
+package mx.com.Etcetera;
+
+
+public class Person {
+	
+	
+	private String name;
+
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	
+}
+
+
+package test;
+
+import java.util.Scanner;
+import mx.com.Etcetera.Person;
+
+
+public class Process {
+
+	Scanner keyboard = new Scanner(System.in);
+	Person person1 = new Person();
+	private int option;
+	private int option2;
+	private String pqr;
+
+	public void getinfo() {
+
+		System.out.println("Bienvenido a nuestra tienda");
+		System.out.println("Selecciona la accion que quieras realizar");
+		System.out.println(" 1.Comprar producto\n 2.Consultar precios por producto\n 3.Hacer devolucion");
+		option = keyboard.nextInt();
+
+	}
+
+	public void showinfo() {
+
+		switch (option) {
+			case 1:
+				System.out.println("Ingrese su nombre por favor");
+				person1.setName(keyboard.nextLine());
+				keyboard.nextLine();
+				System.out.println(person1.getName()+"Los siguientes productos son para la piel");
+				System.out.println("1.Clorotimazol\n 2.Umbrella Body\n 3. Agua de rosas\n 4.No comprar producto");
+				option2 = keyboard.nextInt();
+
+				if (option2 == 1 || option2 == 2 || option2 == 3) {
+
+					System.out.println("Excelente Producto,  Adquirido");
+
+				} else if(option==4) {
+
+					System.out.println("Aqui estaremos para atenderte");
+
+				}else{
+				
+					System.out.println("Seleccione una opcion correcta");
+				
+				}
+
+				break;
+
+			case 2:
+
+				System.out.println("Los productos varian segun la temporada, estos son nuestros precios por el momento\n--Clorotimazol $15000\n--Umbrella body $25000\n --Agua de rosas $32000");
+				break;
+
+			case 3:
+				System.out.println("Gracias por tu devolucion");
+				System.out.println("Tuviste algun inconveniente?\n 1.Si quiero presentar novedad\n 2.No se presento ninguna novedad");
+				option2 = keyboard.nextInt();
+
+				if (option2 == 1) {
+					System.out.println("Ingresa tu nombre para que la novedad sea tuya");
+					person1.setName(keyboard.nextLine());
+					keyboard.nextLine();
+					System.out.println("Cuentanos que paso?");
+					pqr = keyboard.nextLine();
+					System.out.println("Gracias por la observacion trabajaremos en ello");
+
+				} else {
+
+					System.out.println("Esta bien gracias");
+
+				}
+				break;
+			
+				
+			default:
+			System.out.println("Ingrese una opcion correcta");
+		}
+
+	}
+
+}
+
+	
+
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../Java/Taller_2.html">VOLVER ATRAS</a>
+</body>
+</html>

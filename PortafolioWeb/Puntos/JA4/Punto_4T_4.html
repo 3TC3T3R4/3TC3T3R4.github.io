@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p><pre>
+	Dada la siguiente matriz bidimensional, el cual debe de quemar en el código
+	01 02 03 04 05
+	06 07 08 09 10
+	11 12 13 14 15
+	16 17 18 19 20
+	Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.
+	01 02 03 04 05
+	10 09 08 07 06
+	11 12 13 14 15
+	20 19 18 17 16
+</pre>
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+		
+package test;
+
+
+public class TestArray {
+	
+	
+	public static void main(String[] args) {
+		Process process = new Process();
+		process.getarray();
+		process.showarray();
+		
+		
+	}
+	
+	
+	
+	
+}
+
+
+package test;
+
+public class Process {
+
+	private final int matrix1[][] = new int[5][5];
+	private final int matrix2[][] = new int[5][5];
+	private int count;
+	private int k;
+	private int x;
+	private int count2;
+	private int i;
+	private int j;
+
+	public void getarray() {
+		count = 1;
+		count2 = 1;
+
+		for (k = 0; k < 5; k++) {
+
+			for (x = 0; x < 5; x++) {
+
+				matrix2[k][x] = count2;
+				count2 = count2 + 1;
+
+			}
+
+		}
+
+		for (i = 0; i <= 3; i++) {
+
+			if (i % 2 == 0) {
+
+				for (j = 0; j <= 4; j++) {
+
+					matrix1[i][j] = count;
+					count = count + 1;
+
+				}
+
+			} else {
+
+				for (j = 4; j >= 0; j--) {
+
+					matrix1[i][j] = count;
+					count = count + 1;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	public void showarray() {
+
+		for (k = 0; k < 4; k++) {
+
+			for (x = 0; x < 5; x++) {
+
+				if (matrix2[k][x] >= 10) {
+
+					System.out.print(" " + matrix2[k][x] + "");
+
+				} else {
+
+					System.out.print(" " + "0" + matrix2[k][x]);
+
+				}
+
+			}
+
+			System.out.println("");
+
+		}
+
+		System.out.println("---------------------------------");
+		System.out.println("---------------------------------");
+		
+		for (i = 0; i < 4; i++) {
+
+			for (j = 0; j < 5; j++) {
+
+				if (matrix1[i][j]>= 10) {
+
+					System.out.print(" " + matrix1[i][j]);
+				} else {
+
+					System.out.print(" "+"0"+ matrix1[i][j] + "");
+
+				}
+
+			}
+
+			System.out.println("");
+
+		}
+
+	}
+
+}
+
+	
+
+
+
+    </pre>
+</p>
+
+
+
+
+<a class="regresar" href="../../Java/Taller_4.html">VOLVER ATRAS</a>
+
+</body>
+</html>

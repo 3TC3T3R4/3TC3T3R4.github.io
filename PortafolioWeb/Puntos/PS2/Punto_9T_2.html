@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p class="titulo">
+    El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+		Proceso point9
+		Definir area,base,height,option Como Entero;
+		Escribir "Bienvenido";
+		Escribir "Seleccione de cual figura le gustaria conocer su area";
+		Escribir "1. Rectangulo" ;
+		Escribir "2. Triangulo";
+		Escribir "3. Trapecio";
+		Leer option;
+		Limpiar Pantalla;
+		
+		Segun option Hacer
+			
+			1:
+				
+				Escribir "Ingrese  la base del rectangulo";
+				leer base;
+				
+				Escribir "Ingrese la altura del rectangulo";
+				leer height;
+				
+				area<-height*base;
+				Escribir "El area del rectangulo es: ",area,"cm²";
+				
+			2:
+				
+				Escribir "Ingrese la base del triangulo";
+				leer base;
+				Escribir "Ingrese la altura del triangulo";
+				leer height;
+				
+				
+				area<-(base*height)/2;
+				Escribir "El area del triangulo es: ",area,"cm²";
+				
+				
+			3:
+				
+				Definir baseMax Como Entero;
+				Definir baseMin como Entero;
+				Escribir "Ingrese la base mayor del trapecio";
+				Leer baseMax;
+				Escribir "Ingrese la base menor del trapecio";
+				Leer baseMin;
+				Escribir "Ingrese la altura del trapecio";
+				Leer height;
+				area<-((baseMax+baseMin)*height)/2;
+				Escribir "El area del trapecio es: ",area,"cm²";
+				
+			
+				
+			De Otro Modo:
+				
+				
+				Escribir "Ingrese una figura valida por favor";
+			
+			
+			
+		FinSegun
+		
+		
+	FinProceso
+	
+
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../PSEint/Taller_2.html">VOLVER ATRAS</a>
+
+
+
+
+
+</body>
+</html>

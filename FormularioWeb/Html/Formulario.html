@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet"   href="../Css/style.css">
+    <script type="text/javascript" src="../Java/Java.js"></script>
+    
+</head>
+<body>
+    
+    <!--get y post el metodo-->
+
+    <label>¡¡CONTACTENOS!!</label>
+    <BR>
+        <BR>
+<form action="datos" method="post">
+
+<label for="name">Ingrese su nombre</label>
+<input type="text" placeholder="Escribe tu nombre" id="name" name="name" required>
+<br>
+<BR>
+<label for="email">Ingrese su correo</label>
+<input type="email" placeholder="Escribe tu email" id="email" name="email" required>
+<br>
+<BR>
+<label for="asunto">Asunto</label>
+<input type="text" placeholder="Escribe tu asunto" id="asunto" name="asunto" required>
+<br>
+<BR>
+    <label>ESCRIBA EL ASUNTO</label>
+    <br>
+    <br>
+<textarea name="comentario" rows="15" cols="40" id="nota"  aria-label="required" ></textarea >
+<br>
+<BR>
+
+<br>
+<BR>
+<input name="enviar" class="botones" type="reset" value="Resetear formulario" >
+</form>
+<button  onclick="enviar()" value="ENVIAR">enviar</button>
+
+
+
+
+
+
+<a style="background-color: red;"  href="../../Index/index.html">REGRESAR</a>
+
+
+</body>
+</html>

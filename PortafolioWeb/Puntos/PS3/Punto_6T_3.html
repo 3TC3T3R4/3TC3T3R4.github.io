@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p class="titulo">
+    Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+		Proceso point6
+	
+		Definir name1,name2,name3,organization1,organization2,organization3 Como Caracter;
+		Definir number1,number2,number3,option Como Entero;
+		Definir flag,flag2 Como Logico;
+		
+		flag<-Verdadero;
+		flag2<-Verdadero;
+		Mientras flag==Verdadero Hacer
+			
+			Escribir"1. Añadir contactos";
+			Escribir"2. Buscar contactos";
+			Escribir"3. Eliminar Contactos";
+			Escribir"4. Terminar programa";
+			leer option;
+			
+			Segun option Hacer
+				
+				
+				1:
+					flag2<-Falso;
+					
+					Escribir "Ingrese el nombre del contacto #1";
+					Leer name1;
+					
+					Escribir "Ingrese el numero del contacto #1";
+					Leer number1;
+					
+					Escribir "Ingrese la organizacion del contacto #1";
+					Leer organization1;
+					
+					Escribir "Ingrese el nombre del contacto #2";
+					Leer name2;
+					
+					Escribir "Ingrese el numero del contacto #2";
+					Leer number2;
+					
+					Mientras number1==number2 Hacer
+						
+						Escribir "No puede ingresar dos contactos con el mismo numero";
+						Escribir "Ingrese nuevamente numero del contacto #2";
+						Leer number2;
+						
+					FinMientras
+					
+					Escribir "Ingrese la organizacion del contacto #2";
+					Leer organization2;
+					
+					Escribir "Ingrese el nombre del contacto #3";
+					Leer name3;
+					
+					Escribir "Ingrese el numero del contacto #3";
+					Leer number3;
+					
+					Mientras number1==number3 o number2==number3 Hacer
+						
+						Escribir "No puede ingresar dos contactos con el mismo numero";
+						Escribir "Ingrese nuevamente el numero del contacto #3";
+						Leer number3;
+						
+						
+						
+					FinMientras
+					
+					Escribir "Ingrese la organizacion del contacto #3";
+					Leer organization3;
+					Limpiar Pantalla;
+					Escribir "";
+					Escribir "CONTACTOS GUARDADOS CON EXÍTO!";
+					Escribir "";
+					
+				2:
+					
+					Si flag2 == Verdadero Entonces
+						
+						Escribir "No se han ingresado contactos por el momento";
+						
+						
+					SiNo
+						
+						Escribir "Contacto #1 ",name1,", numero de contacto ",number1,"  organizacion, ",organization1;
+						Escribir "Contacto #2 ",name2,", numero de contacto ",number2,"  organizacion, ",organization2;
+						Escribir "Contacto #3 ",name3,", numero de contacto ",number3,"  organizacion, ",organization3;
+						Escribir "";
+						
+					FinSi
+					
+					
+				3:
+					
+					Si flag2 == Verdadero Entonces
+						
+						Escribir "No se han ingresado contactos por el momento para poder eliminarlos";
+						
+						
+					SiNo
+						Escribir "Cual contacto quisieras eliminar?";
+						Escribir "1. Contacto #1 ",name1,", numero de contacto ",number1,"  organizacion, ",organization1;
+						Escribir "2. Contacto #2 ",name2,", numero de contacto ",number2,"  organizacion, ",organization2;
+						Escribir "3. Contacto #3 ",name3,", numero de contacto ",number3,"  organizacion, ",organization3;
+						Leer option;
+						
+						Segun option Hacer
+							
+							1:
+								
+								Escribir "Solo quedan estos contactos";
+								Escribir "2. Contacto #2 ",name2,", numero de contacto ",number2,"  organizacion, ",organization2;
+								Escribir "3. Contacto #3 ",name3,", numero de contacto ",number3,"  organizacion, ",organization3;
+								Escribir "";
+								
+							2:
+								Escribir "Solo quedan estos contactos";
+								Escribir "1. Contacto #1 ",name1,", numero de contacto ",number1,"  organizacion, ",organization1;
+								Escribir "3. Contacto #3 ",name3,", numero de contacto ",number3,"  organizacion, ",organization3;
+								Escribir "";
+								
+							3:
+								Escribir "Solo quedan estos contactos";
+								Escribir "1. Contacto #1 ",name1,", numero de contacto ",number1,"  organizacion, ",organization1;
+								Escribir "2. Contacto #2 ",name2,", numero de contacto ",number2,"  organizacion, ",organization2;
+								Escribir "";
+								
+								
+							De Otro Modo:
+								Escribir "Selecciona una opcion correcta";
+							
+							
+						FinSegun
+						
+					FinSi
+					
+					
+				4:
+					
+					
+				flag<-Falso;	
+					
+					
+					
+					
+				De Otro Modo:
+					Escribir "seleccione una opcion valida";
+					
+					
+				
+				
+			FinSegun
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		FinMientras
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	FinProceso
+	
+
+
+
+    </pre>
+</p>
+
+
+<a class="regresar" href="../../PSEint/Taller_3.html">VOLVER ATRAS</a>
+
+</body>
+</html>

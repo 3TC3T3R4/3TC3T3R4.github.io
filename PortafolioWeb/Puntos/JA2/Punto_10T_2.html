@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+	El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.	
+
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+		
+package test;
+
+
+public class TestAccount {
+
+	public static void main(String[] args) {
+	
+		Process process = new Process();
+		process.getinfo();
+		process.showinfo();
+		
+	}
+
+	
+}
+
+
+
+
+package mx.com.Etcetera;
+
+
+public class Account {
+	
+
+	private double quantityAccount;
+	private double quantity;
+	private String titular;
+
+	public double getQuantityAccount() {
+		return quantityAccount;
+	}
+
+	public void setQuantityAccount(double quantityAccount) {
+		this.quantityAccount = quantityAccount;
+	}
+
+	public double getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(double quantity) {
+		this.quantity = quantity;
+	}
+
+	public String getTitular() {
+		return titular;
+	}
+
+	public void setTitular(String titular) {
+		this.titular = titular;
+	}
+	
+
+		
+}
+
+
+
+
+
+package test;
+
+import java.util.Scanner;
+import mx.com.Etcetera.Account;
+
+
+public class Process {
+	
+	Scanner keyboard = new Scanner(System.in);
+	Account acount = new Account();
+	private int option;
+	
+	
+	public void getinfo(){
+	
+		System.out.println("Bienvenido a su BANCO FIEL");
+		System.out.println("Para el correcto funcionamiento debemos ingresar la siguiente informacion");
+		System.out.println("Ingrese la titular de la cuenta");
+		acount.setTitular(keyboard.nextLine());
+		System.out.println("Ingrese el monto total de la cuenta");
+		acount.setQuantityAccount(keyboard.nextDouble());
+		
+		System.out.println("Que opcion quisieras realizar\n 1.Realizar registro\n2.Realizar retiro\n3.Consultar valor");
+		option=keyboard.nextInt();
+		
+	
+	}
+
+	public void showinfo(){
+	
+		switch (option) {
+			case 1:
+				System.out.println("Ingrese la cantidad");
+				acount.setQuantity(keyboard.nextDouble());
+				if(acount.getQuantity()<= 0){
+				
+					System.out.println("No puede ingresar valores negativos o equivalentes a 0");
+				}else{
+				
+					System.out.println("Se ingreso un valor acorde a $" +acount.getQuantity());	
+					System.out.println("La titutar "+acount.getTitular()+" cuenta con la cantidad inicial de $" + acount.getQuantityAccount()+"\n el monto en tiempo real es de $" +(acount.getQuantity() + acount.getQuantityAccount()));
+				
+				}
+				
+				break;
+			
+			case 2:
+				
+				System.out.println("Cuanto es el monto que desea retirar?");
+				acount.setQuantity(keyboard.nextDouble());
+				
+				if(acount.getQuantity()>acount.getQuantityAccount()){
+				
+					System.out.println("No puede retirar un monto mayor al existente en la cuenta");
+				
+				}else{
+				
+				
+					System.out.println("Se retiro un valor acorde a: " +acount.getQuantity()+"\n el monto inicial en tiempo real de la cuenta es: $"+ (acount.getQuantityAccount() - acount.getQuantity()));
+				}
+				
+				
+				break;
+				
+			case 3:
+				
+				System.out.println("Su saldo actual es de: $"+acount.getQuantityAccount());
+				break;
+		
+			default:
+				
+				System.out.println("Ingrese una opcion valida");	
+				
+		}
+	
+	
+	
+	}
+	
+	
+}
+
+
+
+		
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../Java/Taller_2.html">VOLVER ATRAS</a>
+
+</body>
+</html>

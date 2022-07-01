@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p class="titulo">
+    La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+		Proceso point5
+		Definir id,option,option2 Como Entero;
+		Definir name,pqr Como Caracter;
+		Escribir "Bienvenido(a) a Droguería Mi Salud selecciona la opcion que vas a realizar";
+		Escribir "presiona 1. Comprar producto";
+		Escribir "presiona 2. Consultar precios por producto";
+		Escribir "presiona 3. hacer devolucion";
+		leer option;
+		Limpiar Pantalla;
+		
+		Segun option Hacer
+			1:
+				Escribir Sin Saltar"Ingresa tu nombre  por favor";
+				leer name;
+				Escribir  name," que producto quieres comprar?";
+				Escribir "Los siguientes productos sirven para tratar problemas en la piel";
+				Escribir "1. Cloritimazol";
+				Escribir "2. Umbrella body";
+				Escribir "3. agua de rosas";
+				Escribir "4.No comprar productos";
+				leer option2;
+				Limpiar Pantalla;
+				
+				si (option2==1 o option2==2 o option2==3) Entonces
+					Escribir "Excelente opción!";
+					Escribir "producto comprado, Enjoy!";
+					
+				SiNo
+					
+					si(option2==4) Entonces
+						
+						Escribir "Nos volveremos a ver recuerda comprar con nosostros";
+						
+					FinSi
+					
+					Escribir "Recuerda seleccionar los diguitos que este presente para poder comprar";
+					
+					
+					
+				FinSi
+				
+			2:
+				
+				Escribir " Los precios pueden varirar dependiendo de la temporada estos son actualmente nuestro portafolio";
+				Escribir "Cloritimazol   $15000";
+				Escribir "Umbrella body  $22000 ";
+				Escribir "agua de rosas  $7000";
+				
+			3:
+				
+				Escribir "Gracias por tu devolucion";
+				Escribir Sin Saltar "Tuviste algun inconveniente?";
+				Escribir  " Quisieras hacer una anotacion o novedad presentada?";
+				Escribir "Presiona 1 Si quieres presentar novedad";
+				Escribir "Presiona 2 para No presentar novedad";
+				Leer option2;
+				
+				si option2 == 1 Entonces
+					Escribir "Ingresa tu nombre para guardar la novedad";
+					leer name;
+					Escribir "Cuentanos ",name," que paso?";
+					Leer pqr;
+					Escribir "Gracias por la observacion, trabajaremos en ello";
+					
+				FinSi
+				
+			De Otro Modo:
+				Escribir "Digite por favor un valor correcto";
+		FinSegun
+		
+		
+		
+	FinProceso
+	
+
+
+
+    </pre>
+</p>
+
+
+<a class="regresar" href="../../PSEint/Taller_2.html">VOLVER ATRAS</a>
+
+</body>
+</html>

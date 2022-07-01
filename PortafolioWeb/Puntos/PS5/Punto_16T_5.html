@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link  rel="stylesheet" href="../../CSS/style.css">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.
+En modo funciones.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+    
+SubProceso  showinfo ()
+Definir x,number,count Como Entero;
+
+Para number<-1 Hasta 1000 Con Paso 1 Hacer
+	
+	x<-1;
+	count<-0;
+	
+	
+	Mientras x <= number Hacer
+		
+		si number MOD x == 0 Entonces
+			
+			count<-count+1;
+			
+		FinSi
+		
+		x<-x+1;
+		
+		
+	FinMientras
+	
+	si count == 2 Entonces
+		
+		Escribir number,"," Sin Saltar;
+		
+	FinSi
+	
+	
+FinPara
+
+FinSubProceso
+
+
+Proceso point3_3
+showinfo();
+FinProceso
+
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../PSEint/Taller_5.html">VOLVER ATRAS</a>
+</body>
+</html>

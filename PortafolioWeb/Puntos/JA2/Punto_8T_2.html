@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+		/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package test;
+
+/**
+ *
+ * @author 4dm1n1str4t0r
+ */
+public class TestCake {
+	public static void main(String[] args) {
+		Process process1 = new Process();
+		process1.getinfo();
+		process1.showinfo();
+	
+	}
+	
+	
+}
+
+
+
+package mx.com.Etceteta;
+
+
+public class Cake {
+
+private String taste;
+private String name;
+private int quantity;
+
+	public String getTaste() {
+		return taste;
+	}
+
+	public void setTaste(String taste) {
+		this.taste = taste;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+
+	
+}
+
+
+
+package test;
+
+import java.util.Scanner;
+import mx.com.Etceteta.Cake;
+
+
+public class Process {
+	
+	Scanner keyboard = new Scanner(System.in);
+	Cake cake1 = new Cake();
+	private int option; 
+	private int salesCount;
+	private int option2;
+	
+	
+	public void getinfo(){
+		System.out.println("Bienvenido");
+		System.out.println("Seleccione la opcion a realizar\n"
+		+ "1.Para generar pedido\n2.Consultar tortas disponibles\n3.Para ver las ventas en tiempo real");
+		option2=keyboard.nextInt();
+	
+	}
+	
+	public void showinfo(){
+		
+		salesCount=0;	
+		
+		switch (option2) {
+			case 1:
+			
+			salesCount=1;
+				System.out.println("Que te gustaria ordenar?");
+				System.out.println("Selecciona tu sabor favorito\n 1.MILO\n2.TRES LECHES\n3.FRUTOS ROJOS");
+				option = keyboard.nextInt();
+				if(option==1){
+				cake1.setName("MILO");
+					System.out.println(cake1.getName()+" Excelente opcion\n Tenemos de 6 porciones o de 8 porciones\n de cuantas porciones te gustaria?\n 6.Para 6 porciones\n 8.Para 8 porciones");
+					cake1.setQuantity(keyboard.nextInt());
+				
+					if(cake1.getQuantity() == 6 ){
+					
+						System.out.println("Seleccionaste torta de " +cake1.getQuantity()+" porciones\n quisieras incluir decoracion?\n 1.SI\n 2.NO ");
+						option=keyboard.nextInt();
+						
+						if(option ==1){
+						System.out.println("Usted ordeno pastel de: " +cake1.getName()+" de " +cake1.getQuantity()+" porciones con decoraciones incluida" );
+						System.out.println("Ventas en tiempo real es de: "+ salesCount);
+						break;
+						
+						}else{
+						System.out.println("Usted ordeno pastel de: " +cake1.getName()+" de " +cake1.getQuantity()+" porciones con decoraciones  no incluida" );
+						System.out.println("Ventas en tiempo real es de: "+ salesCount);
+						break;
+						}
+						
+					}else{
+					
+						System.out.println("Seleccionaste torta de " +cake1.getQuantity()+" porciones\n quisieras incluir decoracion?\n 1.SI\n 2.NO ");
+						option=keyboard.nextInt();
+						
+						if(option ==1){
+						System.out.println("Usted ordeno pastel de: " +cake1.getName()+" de " +cake1.getQuantity()+" porciones con decoraciones incluida" );
+						System.out.println("Ventas en tiempo real es de: "+ salesCount);
+						break;
+						
+						}else{
+						System.out.println("Usted ordeno pastel de: " +cake1.getName()+" de " +cake1.getQuantity()+" porciones con decoraciones no incluida" );
+					System.out.println("Ventas en tiempo real es de: "+ salesCount);
+					break;
+					}
+					
+					
+					
+				}
+					
+			
+			}else if(option==2){
+				
+				cake1.setName("TRES LECHES");
+					System.out.println(cake1.getName()+" Excelente opcion\n Tenemos de 6 porciones o de 8 porciones\n de cuantas porciones te gustaria?\n 6.Para 6 porciones\n 8.Para 8 porciones");
+					cake1.setQuantity(keyboard.nextInt());
+				
+					if(cake1.getQuantity() == 6 ){
+					
+						System.out.println("Seleccionaste torta de " +cake1.getQuantity()+" porciones\n quisieras incluir decoracion?\n 1.SI\n 2.NO ");
+						option=keyboard.nextInt();
+						
+						if(option ==1){
+						System.out.println("Usted ordeno pastel de: " +cake1.getName()+" de " +cake1.getQuantity()+" porciones con decoraciones incluida" );
+						System.out.println("Ventas en tiempo real es de: "+ salesCount);
+						break;
+						
+						}else{
+						System.out.println("Usted ordeno pastel de: " +cake1.getName()+" de " +cake1.getQuantity()+" porciones con decoraciones no incluida" );
+						System.out.println("Ventas en tiempo real es de: "+ salesCount);
+						break;
+						}
+						
+					}else{
+					
+						System.out.println("Seleccionaste torta de " +cake1.getQuantity()+" porciones\n quisieras incluir decoracion?\n 1.SI\n 2.NO ");
+						option=keyboard.nextInt();
+						
+						if(option ==1){
+						System.out.println("Usted ordeno pastel de: " +cake1.getName()+" de " +cake1.getQuantity()+" porciones con decoraciones incluida" );
+						System.out.println("Ventas en tiempo real es de: "+ salesCount);
+						break;
+						
+						}else{
+						System.out.println("Usted ordeno pastel de: " +cake1.getName()+" de " +cake1.getQuantity()+" porciones con decoraciones no incluida" );
+					System.out.println("Ventas en tiempo real es de: "+ salesCount);
+					break;
+					}
+					
+					
+					
+				}
+			
+			}else if(option==3){
+			
+			cake1.setName("FRUTOS ROJOS");
+					System.out.println(cake1.getName()+" Excelente opcion\n Tenemos de 6 porciones o de 8 porciones\n de cuantas porciones te gustaria?\n 6.Para 6 porciones\n 8.Para 8 porciones");
+					cake1.setQuantity(keyboard.nextInt());
+				
+					if(cake1.getQuantity() == 6 ){
+					
+						System.out.println("Seleccionaste torta de " +cake1.getQuantity()+" porciones\n qquisieras incluir decoracion?\n 1.SI\n 2.NO ");
+						option=keyboard.nextInt();
+						
+						if(option ==1){
+						System.out.println("Usted ordeno pastel de: " +cake1.getName()+" de " +cake1.getQuantity()+" porciones con decoraciones incluida" );
+						System.out.println("Ventas en tiempo real es de: "+ salesCount);
+						break;
+						
+						}else{
+						System.out.println("Usted ordeno pastel de: " +cake1.getName()+" de " +cake1.getQuantity()+" porciones con decoraciones no incluida" );
+						System.out.println("Ventas en tiempo real es de: "+ salesCount);
+						break;
+						}
+						
+					}else{
+					
+						System.out.println("Seleccionaste torta de " +cake1.getQuantity()+" porciones\n quisieras incluir decoracion?\n 1.SI\n 2.NO ");
+						option=keyboard.nextInt();
+						
+						if(option ==1){
+						System.out.println("Usted ordeno pastel de: " +cake1.getName()+" de " +cake1.getQuantity()+" porciones con decoraciones incluida" );
+						System.out.println("Ventas en tiempo real es de: "+ salesCount);
+						break;
+						
+						}else{
+						System.out.println("Usted ordeno pastel de: " +cake1.getName()+" de " +cake1.getQuantity()+" porciones con decoraciones no incluida" );
+					System.out.println("Ventas en tiempo real es de: "+ salesCount);
+					break;
+						}
+					
+					
+					
+				}
+			
+			
+			
+			}
+		
+				
+			case 2:
+				
+				
+			System.out.println("Por el momento tenemos disponibles estos sabores: \n --MILO\n --TRES LECHES\n --FRUTOS ROJOS");
+				
+				
+				break;
+			case 3:	
+			
+				
+				System.out.println("Ventas en tiempo real es de: " + salesCount);
+				
+				break;
+			
+			default:
+			
+			System.out.println("Ingresa una opcion correcta");
+			
+		}
+	
+		
+	
+	}
+
+	
+}
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../Java/Taller_2.html">VOLVER ATRAS</a>
+</body>
+</html>

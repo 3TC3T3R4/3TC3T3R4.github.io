@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p class="titulo">
+	El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.	
+
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+		Proceso point10
+	Definir titular Como Caracter;
+	Definir option como Entero;
+	Definir quantityAccount,quantity Como Real;
+	
+	Escribir "Bienvenido(a) a su BANCO FIEL";
+	Escribir "Para el correcto funcionamiento debemos ingresar primero informacion confidencial";
+	Escribir "Ingrese por favor el titular  de la cuenta";
+	Leer titular;
+	Escribir "Ingrese el monto total de la cuenta";
+	leer quantity;
+	Limpiar Pantalla;
+	
+	Escribir"¿Que opcion quisiera realizar?"; 
+	Escribir"1. Realizar  ingreso" ;
+	Escribir"2. Realizar  retiro";
+	Escribir"3. Consultar valor";
+	Leer option;
+	Limpiar Pantalla;
+	
+	Segun option Hacer
+		
+		1:
+			
+			Escribir "Ingrese la cantidad  por favor";
+			leer quantityAccount;
+			Limpiar Pantalla;
+			si quantityAccount <= 0 Entonces
+				
+				Escribir "No puede ingresar montos negativos ó montos equivalentes a cero (0)";
+				
+			SiNo
+				
+				Escribir "Se ingreso un valor acorde a $",quantityAccount;
+				Escribir "La titular ",titular," cuenta con cantidad inicial de $",quantity;
+				Escribir "Monto en tiempo real con el nuevo ingreso es de $",quantity+quantityAccount;
+				
+			FinSi
+			
+			
+			
+		2:
+			
+			Escribir "Cual es el monto que desea retirar";
+			Leer quantityAccount;
+			
+			
+			si quantityAccount > quantity Entonces
+				
+				
+				Escribir "No puede retirar un monto mayor al establecido en la cuenta";
+				
+				
+			SiNo
+				
+				
+				Escribir "Se retiro un valor acorde a $",quantityAccount," con origen de la titular ",titular," la cual cuenta con cantidad inicial de $",quantity;
+				Escribir "Cantidad inicial despues de su modificacion: $",quantity-quantityAccount;
+				
+			
+				
+			FinSi
+		
+			
+		3:
+			
+			Escribir "Su saldo actualmente es de $ ",quantity;
+		
+		De Otro Modo:
+			
+		
+		
+	FinSegun
+	
+	
+	
+	
+FinProceso
+
+		
+
+
+    </pre>
+</p>
+
+
+<a class="regresar" href="../../PSEint/Taller_2.html">VOLVER ATRAS</a>
+
+</body>
+</html>

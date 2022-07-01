@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+
+    <label class="codigoenunciado">Enunciado</label>
+<p>
+    Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].
+
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+<pre class="loquemuestro">
+	package test;
+
+	import mx.com.Etcetera.Person;
+	
+	public class TestPerson {
+	
+		public static void main(String[] args) {
+	
+			Person person1 = new Person();
+	
+			person1.getinfo();
+	
+		}
+	
+	}
+
+	
+
+	package mx.com.Etcetera;
+
+import java.util.Scanner;
+
+public class Person {
+
+	private String name;
+	private String lastname;
+	private String motherName;
+	private String motherLastname;
+	private String fatherName;
+	private String fatherLastname;
+
+	Scanner keyboard = new Scanner(System.in);
+
+	public Person(String name, String lastname, String motherName, String motherLastname, String fatherName, String fatherLastname) {
+		this.name = name;
+		this.lastname = lastname;
+		this.motherName = motherName;
+		this.motherLastname = motherLastname;
+		this.fatherName = fatherName;
+		this.fatherLastname = fatherLastname;
+	}
+
+	public Person() {
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public String getMotherName() {
+		return motherName;
+	}
+
+	public void setMotherName(String motherName) {
+		this.motherName = motherName;
+	}
+
+	public String getMotherLastname() {
+		return motherLastname;
+	}
+
+	public void setMotherLastname(String motherLastname) {
+		this.motherLastname = motherLastname;
+	}
+
+	public String getFatherName() {
+		return fatherName;
+	}
+
+	public void setFatherName(String fatherName) {
+		this.fatherName = fatherName;
+	}
+
+	public String getFatherLastname() {
+		return fatherLastname;
+	}
+
+	public void setFatherLastname(String fatherLastname) {
+		this.fatherLastname = fatherLastname;
+	}
+
+	public void getinfo() {
+
+		System.out.println("Ingrese su nombre");
+		name = keyboard.nextLine();
+		System.out.println("Ingrese su apellido");
+		lastname = keyboard.nextLine();
+		System.out.println("Ingrese el nombre de su madre");
+		motherName = keyboard.nextLine();
+		System.out.println("Ingrese el apellido de su madre");
+		motherLastname = keyboard.nextLine();
+		System.out.println("Ingrese el nombre de su padre");
+		fatherName = keyboard.nextLine();
+		System.out.println("Ingrese el apellido de su padre");
+		fatherLastname = keyboard.nextLine();
+
+		System.out.flush();
+
+		System.out.println("Yo "+ name +" "+ lastname + " soy hijo de " + motherName +" "+ motherLastname + " y " + fatherName +" "+ fatherLastname);
+
+	}
+
+}
+
+
+
+</pre>
+
+</p>
+
+
+<a class="regresar" href="../../Java/Taller_1.html">REGRESAR</a>
+
+</body>
+</html>

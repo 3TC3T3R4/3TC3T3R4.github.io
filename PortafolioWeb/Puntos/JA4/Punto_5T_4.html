@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p>
+    Se debe de imprimir el siguiente cuadro
+<pre>
+	-----------------------------------------------------------------------COLUMNAS--------------------------------------------------------
+
+	  [0]             [1]             [2]             [3]             [4]             [5]             [6]             [7]             [8]             [9]
+
+  [0]
+	  [1X1]           [2X1]           [3X1]           [4X1]           [5X1]           [6X1]           [7X1]           [8X1]           [9X1]           [10X1]
+  [1]
+	  [1X2]           [2X2]           [3X2]           [4X2]           [5X2]           [6X2]           [7X2]           [8X2]           [9X2]           [10X2]
+  [2]
+	  [1X3]           [2X3]           [3X3]           [4X3]           [5X3]           [6X3]           [7X3]           [8X3]           [9X3]           [10X3]
+F [3]
+	  [1X4]           [2X4]           [3X4]           [4X4]           [5X4]           [6X4]           [7X4]           [8X4]           [9X4]           [10X4]
+I [4]
+	  [1X5]           [2X5]           [3X5]           [4X5]           [5X5]           [6X5]           [7X5]           [8X5]           [9X5]           [10X5]
+L [5]
+	  [1X6]           [2X6]           [3X6]           [4X6]           [5X6]           [6X6]           [7X6]           [8X6]           [9X6]           [10X6]
+A [6]
+	  [1X7]           [2X7]           [3X7]           [4X7]           [5X7]           [6X7]           [7X7]           [8X7]           [9X7]           [10X7]
+S [7]
+	  [1X8]           [2X8]           [3X8]           [4X8]           [5X8]           [6X8]           [7X8]           [8X8]           [9X8]           [10X8]
+  [8]
+	  [1X9]           [2X9]           [3X9]           [4X9]           [5X9]           [6X9]           [7X9]           [8X9]           [9X9]           [10X9]
+  [9]
+	  [1X10]          [2X10]          [3X10]          [4X10]          [5X10]          [6X10]          [7X10]          [8X10]          [9X10]          [10X10]
+
+
+</pre>
+El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe estar previamente calculado en una matriz bidimensional la cual cada resultado obedecerá a la fila y columna insertada por el usuario.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+
+		
+package test;
+
+
+public class TestArrays {
+	public static void main(String[] args) {
+		Process process = new Process();
+		process.showinfo();
+		
+		
+	}
+	
+	
+}
+
+
+package test;
+
+import java.util.Scanner;
+
+
+public class Process {
+	Scanner keyboard = new Scanner(System.in);
+	private  int count;
+	private  int x;
+	private  int k;
+	private  int columna;
+	private  int fila;
+	private final int arrayf[] = new int[10];
+	private final  int arrayc[] = new int[10];
+	private final int matrix1[][]= new int[10][10];
+	private final int matrix2[][]= new int[10][10];
+	private final String filas[]= new String[10];
+	
+	public void showinfo(){
+	
+		System.out.println("--------------------------------------------COLUMNAS----------------------------------------------------------");
+		
+		for (int i = 0; i < 10; i++) {
+			
+			arrayf[i]=i;
+			arrayc[i]=i;
+			
+		}
+	filas[0]=" ";
+	filas[1]=" ";
+	filas[2]=" ";
+	filas[3]="F";
+	filas[4]="I";
+	filas[5]="L";
+	filas[6]="A";
+	filas[7]="S";
+	filas[8]=" ";
+	filas[9]=" ";
+		
+		for (int i = 0; i < 10; i++) {
+			
+			System.out.print("            "+arrayc[i]);	
+		}
+		
+		
+		
+		System.out.println("");
+		System.out.println("");
+	x=1;
+	k=1;
+	for (int i=0 ;i<10;i++){
+	
+		for (int j = 0; j < 10; j++) {
+			
+			matrix1[i][j]=j+1;
+			matrix2[i][j]=k*x;
+			k=k+1;
+			
+		}
+	
+		k=1;
+		x=x+1;
+		
+	
+	}
+		
+	  
+	
+		for (int i = 0; i < 10; i++) {
+			
+			System.out.print(filas[i]);
+			System.out.println("  ["+arrayf[i]+"]");
+			count=1+i;
+			
+			for (int j = 0; j < 10; j++) {
+				
+				System.out.print("        ["+matrix1[i][j]+"X"+count+"]");
+				
+			}
+			
+			System.out.println("");
+		}
+		
+		System.out.println("");
+		System.out.println("");
+		
+		
+		
+		System.out.println("Ingrese la fila que desea seleccionar");
+		fila=keyboard.nextInt();
+		System.out.println("Ingrese la columna");
+		columna=keyboard.nextInt();
+		System.out.println("");
+		System.out.println("El resultado de la multiplicacion es: "+ matrix2[fila][columna]);
+	
+	
+	}
+	
+	
+	
+}
+
+
+
+    </pre>
+</p>
+
+
+
+
+<a class="regresar" href="../../Java/Taller_4.html">VOLVER ATRAS</a>
+
+
+</body>
+</html>

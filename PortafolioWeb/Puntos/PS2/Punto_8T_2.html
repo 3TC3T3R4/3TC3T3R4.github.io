@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<link  rel="stylesheet" href="../../CSS/style.css ">
+
+</head>
+<body class="codigo">
+    
+<label class="codigoenunciado">Enunciado</label>
+<p class="titulo">
+    El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.
+</p>
+
+<label class="solution">Solucion</label>
+<p>
+    <pre class="loquemuestro">
+		Proceso point8
+		Definir salesCounter,option,quantity Como Entero;
+		Definir taste Como Caracter;
+		salesCounter<-0;
+		Escribir "Presione 1. para generar pedido";
+		Escribir "Presione 2. para consultar tortas disponibles";
+		Escribir "Presiona 3. para ver la cantidad de ventas en tiempo real";
+		Leer option;
+		
+		Segun option hacer
+			
+			1:
+				
+				salesCounter<-1;
+				Escribir "¿Que te gustaria ordenar?";
+				Escribir "Selecciona tu sabor favorito!";
+				Escribir "1. MILO";
+				Escribir "2. TRES LECHES";
+				Escribir "3. FRUTOS ROJOS";
+				leer option;
+				Limpiar Pantalla;
+				si option == 1 Entonces
+					taste<-"MILO";
+					Escribir"Excelente opcion";
+					Escribir "Tenemos de 6 porciones y tambien de 8 porciones, cual te gustaria?";
+					Escribir "6.  (6) SEIS PORCIONES";
+					Escribir "8.  (8) OCHO PORCIONES";
+					Leer quantity;
+					Segun quantity Hacer
+						
+						6:
+							Escribir "Torta de 6 porciones sabor a ", taste," desea incluir decoracion?";
+							Escribir "1. SI";
+							Escribir "2. NO";
+							Leer option;
+							si option == 1 Entonces
+								
+								Escribir "Pedido realizado, Enjoy";
+								Escribir "Usted compro: Torta de 6 porciones sabor a ", taste," con decoracion incluida";
+							SiNo
+								
+								Escribir "Pedido realizado, Enjoy";
+								Escribir "Usted compro: Torta de 6 porciones sabor a ", taste," sin decoracion incluida";
+								
+							FinSi
+							
+							
+						8:
+							Escribir "Torta de 8 porciones sabor a ",taste," desea incluir decoracion?";
+							Escribir "1. SI";
+							Escribir "2. NO";
+							Leer option;
+							
+							si option == 1 Entonces
+								
+								Escribir "Pedido realizado, Enjoy";
+								Escribir "Usted compro: Torta de 8 porciones sabor a ", taste," con decoracion incluida";
+							SiNo
+								
+								Escribir "Pedido realizado, Enjoy";
+								Escribir "Usted compro: Torta de 8 porciones sabor a ", taste," sin decoracion incluida";
+								
+							FinSi
+							
+							
+						De Otro Modo:
+							Escribir "Seleccione una opcion correcta";
+							
+					 FinSegun
+					 
+					 
+				SiNo
+					
+					si option==2 Entonces
+						
+						taste<-"TRES LECHES";
+						Escribir"Excelente opcion";
+						Escribir "Tenemos de 6 porciones y tambien de 8 porciones, cual te gustaria?";
+						Escribir "6.  (6) SEIS PORCIONES";
+						Escribir "8.  (8) OCHO PORCIONES";
+						Leer quantity;
+						Segun quantity Hacer
+							
+							6:
+								Escribir "Torta de 6 porciones sabor a ",taste," desea incluir decoracion?";
+								Escribir "1. SI";
+								Escribir "2. NO";
+								Leer option;
+								si option == 1 Entonces
+									
+									Escribir "Pedido realizado, Enjoy";
+									Escribir "Usted compro: Torta de 6 porciones sabor a ", taste," con decoracion incluida";
+								SiNo
+									
+									Escribir "Pedido realizado, Enjoy";
+									Escribir "Usted compro: Torta de 6 porciones sabor a ", taste," sin decoracion incluida";
+									
+								FinSi
+								
+								
+							8:
+								Escribir "Torta de 8 porciones sabor a ",taste," desea incluir decoracion?";
+								Escribir "1. SI";
+								Escribir "2. NO";
+								Leer option;
+								
+								si option == 1 Entonces
+									
+									Escribir "Pedido realizado, Enjoy";
+									Escribir "Usted compro: Torta de 8 porciones sabor a ", taste," con decoracion incluida";
+								SiNo
+									
+									Escribir "Pedido realizado, Enjoy";
+									Escribir "Usted compro: Torta de 8 porciones sabor a ", taste," sin decoracion incluida";
+									
+								FinSi
+								
+								
+							De Otro Modo:
+								Escribir "Seleccione una opcion correcta";
+								
+						FinSegun
+						
+						
+					FinSi
+					
+					
+					
+					si option==3 Entonces
+						
+							taste<-"FRUTOS ROJOS";
+							Escribir"Excelente opcion";
+							Escribir "Tenemos de 6 porciones y tambien de 8 porciones, cual te gustaria?";
+							Escribir "6.  (6) SEIS PORCIONES";
+							Escribir "8.  (8) OCHO PORCIONES";
+							Leer quantity;
+							Segun quantity Hacer
+								
+								6:
+									Escribir "Torta de 6 porciones sabor a ",taste," desea incluir decoracion?";
+									Escribir "1. SI";
+									Escribir "2. NO";
+									Leer option;
+									Limpiar Pantalla;
+									si option == 1 Entonces
+										
+										Escribir "Pedido realizado, Enjoy";
+										Escribir "Usted compro: Torta de 6 porciones sabor a ", taste," con decoracion incluida";
+									SiNo
+										
+										Escribir "Pedido realizado, Enjoy";
+										Escribir "Usted compro: Torta de 6 porciones sabor a ", taste," sin decoracion incluida";
+										
+									FinSi
+									
+									
+								8:
+									Escribir "Torta de 8 porciones sabor a ",taste," desea incluir decoracion?";
+									Escribir "1. SI";
+									Escribir "2. NO";
+									Leer option;
+									
+									si option == 1 Entonces
+										
+										Escribir "Pedido realizado, Enjoy";
+										Escribir "Usted compro: Torta de 8 porciones sabor a ", taste," con decoracion incluida";
+									SiNo
+										
+										Escribir "Pedido realizado, Enjoy";
+										Escribir "Usted compro: Torta de 8 porciones sabor a ",taste," sin decoracion incluida";
+										
+									FinSi
+									
+									
+								De Otro Modo:
+									Escribir "Seleccione una opcion correcta";
+									
+							FinSegun
+						
+					FinSi
+					
+				FinSi
+				
+				
+				Escribir "";
+				
+				Escribir "LA CANTIDAD DE VENTAS HASTA EL MOMENTO ES DE:  ", salesCounter; 
+				
+				
+				
+				
+				
+			2:
+				
+				Escribir "Por el momento tenemos disponibles 3 de nuestros mejores sabores";
+				Escribir "";
+				Escribir "--MILO";
+				Escribir "--TRES LECHES";
+				Escribir "--FRUTOS ROJOS";
+				
+				
+			3:
+				
+				
+				Escribir "LA CANTIDAD DE VENTAS HASTA EL MOMENTO ES DE:  ", salesCounter; 
+				
+				
+				
+				
+			De Otro Modo:
+			Escribir "Ingrese una opcion valida por favor";
+			
+		
+	
+			
+		FinSegun
+		
+	FinProceso
+	
+
+
+
+    </pre>
+</p>
+
+
+
+<a class="regresar" href="../../PSEint/Taller_2.html">VOLVER ATRAS</a>
+</body>
+</html>
